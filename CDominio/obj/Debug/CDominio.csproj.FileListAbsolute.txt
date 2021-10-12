@@ -1,0 +1,11 @@
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CDominio.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CDominio.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CAccesoDatos.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CComun.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CAccesoDatos.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CComun.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.AssemblyReference.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CopyComplete
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.pdb
