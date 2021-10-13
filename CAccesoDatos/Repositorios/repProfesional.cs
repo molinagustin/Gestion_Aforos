@@ -18,7 +18,7 @@ namespace CAccesoDatos.Repositorios
 
         public repProfesional()
         {
-            ObtProfInspElect = "select * from profesionales where Inspector=True and Activo=True";
+            ObtProfInspElect = "select * from profesionales where Inspector=1 and Activo=1";
         }
 
         //Metodos
@@ -57,7 +57,8 @@ namespace CAccesoDatos.Repositorios
                     UsuarioCrea = Convert.ToInt32(fila[10]),
                     FechaCrea = Convert.ToDateTime(fila[11]),
                     UsuarioModif = Convert.ToInt32(fila[12]),
-                    FechaUltModif = Convert.ToDateTime(fila[13])
+                    FechaUltModif = Convert.ToDateTime(fila[13]),
+                    NombreCompleto = fila[3] + " " + fila[2]
                 });
             }
 

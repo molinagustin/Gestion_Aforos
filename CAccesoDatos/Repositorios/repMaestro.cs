@@ -118,6 +118,7 @@ namespace CAccesoDatos.Repositorios
                         comando.Parameters.Add(param);
                     }
                     int numId = Convert.ToInt32(comando.ExecuteScalar());
+                    parametros.Clear();
                     return numId;
                 }
             }

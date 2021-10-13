@@ -133,6 +133,7 @@ namespace CPresentacion.Formularios.Principal
             HabilitarControles();
             ddmAfoElect.PrimaryColor = Color.FromArgb(159, 161, 224);
             ddmUsuarios.PrimaryColor = Color.FromArgb(159, 161, 224);
+            btnPerfil.Text = cacUsuario.Nombre.ToUpper() + " " + cacUsuario.Apellido.ToUpper();
         }
 
         private void OpenChildForm(Form childForm)

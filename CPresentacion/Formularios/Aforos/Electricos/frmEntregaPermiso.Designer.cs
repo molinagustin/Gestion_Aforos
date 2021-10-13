@@ -447,6 +447,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGenerar
             // 
@@ -469,6 +470,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnGenerar.Text = "GENERAR";
             this.btnGenerar.TextColor = System.Drawing.Color.White;
             this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // txtImporte
             // 
@@ -760,6 +762,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(768, 702);
             this.Name = "frmEntregaPermiso";
+            this.Load += new System.EventHandler(this.frmEntregaPermiso_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -42,6 +42,8 @@ namespace CAccesoDatos.Repositorios
             parametros.Add(new SqlParameter("@UsuarioModif", entidad.UsuarioModif));
 
             ExecuteNonQuery(InsertarExpte);
+            parametros.Add(new SqlParameter("@Anio", entidad.Anio));
+            parametros.Add(new SqlParameter("@Numero", entidad.Numero));
             return ExecuteScalarWithParameters(ObtenerIdNuevoExpte);
         }
 

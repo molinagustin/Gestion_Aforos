@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Modelos\modExpediente.cs" />
     <Compile Include="Modelos\modLocalidad.cs" />
+    <Compile Include="Modelos\modPermisoElectrico.cs" />
+    <Compile Include="Modelos\modProfesional.cs" />
     <Compile Include="Modelos\modTipoConexion.cs" />
     <Compile Include="Modelos\modTipoMedidor.cs" />
     <Compile Include="Modelos\modTipoObraConexionElectrica.cs" />

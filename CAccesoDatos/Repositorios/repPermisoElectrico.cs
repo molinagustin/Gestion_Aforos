@@ -14,10 +14,13 @@ namespace CAccesoDatos.Repositorios
     public class repPermisoElectrico : repMaestro, IRepositorioPermisoElectrico
     {
         private string AgregarNuevoPermiso;
+        private string ObtenerNumPermiso;
 
         public repPermisoElectrico()
         {
             AgregarNuevoPermiso = "insert into per_conex_electricas (Acronimo, Fecha, Expediente, TipoConex, TipoMedid, TipoObraConex, PotenciaHP, Dias, Iniciador, Domicilio, Localidad, Inspector, Observaciones, Comprobante, Importe, UsuarioCrea, FechaCrea, UsuarioModif) values (@Acronimo, @Fecha, @Expediente, @TipoConex, @TipoMedid, @TipoObraConex, @PotenciaHP, @Dias, @Iniciador, @Domicilio, @Localidad, @Inspector, @Observaciones, @Comprobante, @Importe, @UsuarioCrea, @FechaCrea, @UsuarioModif)";
+
+            ObtenerNumPermiso = "select MAX(NumPermiso) from per_conex_electricas where Expediente=@Expediente";
         }
 
         public int Agregar(entPermisoElectrico entidad)
@@ -41,9 +44,10 @@ namespace CAccesoDatos.Repositorios
             parametros.Add(new SqlParameter("@UsuarioCrea", entidad.UsuarioCrea));
             parametros.Add(new SqlParameter("@FechaCrea", entidad.FechaCrea));
             parametros.Add(new SqlParameter("@UsuarioModif", entidad.UsuarioModif));
-
-            //Ejecuto el Scalar con parametros para que me devuelva el numero de permiso generado
-            return ExecuteScalarWithParameters(AgregarNuevoPermiso);
+                        
+            ExecuteNonQuery(AgregarNuevoPermiso);
+            parametros.Add(new SqlParameter("@Expediente", entidad.Expediente));
+            return ExecuteScalarWithParameters(ObtenerNumPermiso);
         }
 
         public int Editar(entPermisoElectrico entidad)

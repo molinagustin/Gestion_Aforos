@@ -22,5 +22,8 @@ namespace CAccesoDatos.Entidades
         public DateTime FechaCrea { get; set; }
         public int UsuarioModif { get; set; }
         public DateTime FechaUltModif { get; set; }
+
+        //Propiedad para crear el nombre completo sin tener que cargarlo en la base de datos
+        public string NombreCompleto { get; set; }
     }
 }
