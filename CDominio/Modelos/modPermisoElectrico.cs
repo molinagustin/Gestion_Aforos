@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,14 @@ using CAccesoDatos.Contratos;
 using CAccesoDatos.Entidades;
 using CAccesoDatos.Repositorios;
 using CDominio.ObjetosDeValor;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System.IO;
+using System.Diagnostics;
+using iText.IO.Image;
 
 namespace CDominio.Modelos
 {
@@ -101,7 +110,10 @@ namespace CDominio.Modelos
                         //De ser necesario, agregar antes los metodos para realizar comprobaciones o calculos
                         var numPermiso = repositorioPE.Agregar(permisoCE);
                         if (numPermiso > 0)
+                        {
                             mensaje = "Se genero correctamente el permiso n° " + numPermiso;
+                            GenerarPdfPermiso(numPermiso);
+                        }
                         else
                             mensaje = "No se pudo generar el permiso";
                         break;
@@ -116,6 +128,35 @@ namespace CDominio.Modelos
             }
 
             return mensaje;
+        }
+
+        public void GenerarPdfPermiso(int numPermiso)
+        {
+            //var tablaDatos = repositorioPE.DatosPermisosPDF(numPermiso);
+                        
+            string rutaDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Permisos Electricos";
+            string rutaCompleta = rutaDir + "\\permiso_num_" + numPermiso + ".pdf";
+            //Compruebo si existe la carpeta donde se guardan los pdf, si no existe se crea, pero si existe no se crea
+            Directory.CreateDirectory(rutaDir);
+
+            
+            PdfWriter pdfW = new PdfWriter(rutaCompleta);
+            PdfDocument pdfDoc = new PdfDocument(pdfW);
+            Document document = new Document(pdfDoc);
+            Image logo = new Image(ImageDataFactory
+                .Create(System.IO.Path.GetFullPath("..\\Debug\\imagenes\\logo_muni.png")))
+                .SetTextAlignment(TextAlignment.LEFT);
+            document.Add(logo);
+            Paragraph header = new Paragraph("Este sera el permiso de conexion n° " + numPermiso)
+                .SetTextAlignment(TextAlignment.CENTER)
+                .SetFontSize(20);
+                
+            document.Add(header);
+            document.Close();
+
+            //Al finalizar, abro el pdf en la ruta donde se guardo
+            Process.Start(rutaCompleta);
+
         }
         #endregion
     }

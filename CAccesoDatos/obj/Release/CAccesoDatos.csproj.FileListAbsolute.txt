@@ -1,0 +1,9 @@
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\bin\Release\CAccesoDatos.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\bin\Release\CAccesoDatos.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\bin\Release\CComun.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\bin\Release\CComun.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\obj\Release\CAccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\obj\Release\CAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\obj\Release\CAccesoDatos.csproj.CopyComplete
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\obj\Release\CAccesoDatos.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CAccesoDatos\obj\Release\CAccesoDatos.pdb

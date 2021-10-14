@@ -34,7 +34,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
 
         private void CargarCbos()
         {
-            //Tipos Conexiones -> Filtro per medio de FindAll para que el modTipoConexiones sea del Id 2 o 4
+            //Tipos Conexiones -> Filtro per medio de FindAll para que el modTipoConexiones sea del Id 2 o 4 (No Definitiva o Definitiva)
             cboTipoConex.ValueMember = "IdTipoConex";
             cboTipoConex.DisplayMember = "TipoConexion";
             cboTipoConex.DataSource = tipoCon.obtenerTiposConexiones().FindAll(e => e.IdTipoConex == 2 || e.IdTipoConex == 4);
@@ -67,13 +67,16 @@ namespace CPresentacion.Formularios.Aforos.Electricos
 
             if (dialog == DialogResult.Yes)
             {
-                int valTipoCon = cboTipoConex.SelectedIndex + 1;
-                int valTipoMed = cboTipoMed.SelectedIndex + 1;
-                int valTipoObCE = cboTipoObraConex.SelectedIndex + 1;
-                int valLoc = cboLocalidad.SelectedIndex + 1;
-                int valInspector = cboInspector.SelectedIndex + 1;
-                string valComprobante = txtAnioComp.Texts.Trim() + "-" + txtNumComp.Texts.Trim();
+                modPermisoElectrico pruebaPDF = new modPermisoElectrico();
+                pruebaPDF.GenerarPdfPermiso(3);
 
+                int valTipoCon = Convert.ToInt32(cboTipoConex.SelectedValue);
+                int valTipoMed = Convert.ToInt32(cboTipoMed.SelectedValue);
+                int valTipoObCE = Convert.ToInt32(cboTipoObraConex.SelectedValue);
+                int valLoc = Convert.ToInt32(cboLocalidad.SelectedValue);
+                int valInspector = Convert.ToInt32(cboInspector.SelectedValue);
+                string valComprobante = txtAnioComp.Texts.Trim() + "-" + txtNumComp.Texts.Trim();
+                
                 modPermisoElectrico permisoCE = new modPermisoElectrico();
                 permisoCE.Acronimo = 2; //Acronimo por defecto para los Permisos Conexion Electrica (PCE)
                 permisoCE.Fecha = DateTime.Today;

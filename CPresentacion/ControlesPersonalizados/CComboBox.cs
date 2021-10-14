@@ -172,7 +172,7 @@ namespace CPresentacion.ControlesPersonalizados
             get { return lblText.Text; }
             set { lblText.Text = value; }
         }
-                
+
         public ComboBoxStyle DropDownStyle
         {
             get { return cmbList.DropDownStyle; }
@@ -262,6 +262,16 @@ namespace CPresentacion.ControlesPersonalizados
         {
             get { return cmbList.ValueMember; }
             set { cmbList.ValueMember = value; }
+        }
+
+        [Bindable(true)]
+        [Browsable(false)]
+        [DefaultValue(null)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public object SelectedValue 
+        {
+            get { return cmbList.SelectedValue; }
+            set { cmbList.SelectedValue = value; }
         }
 
         //Private methods

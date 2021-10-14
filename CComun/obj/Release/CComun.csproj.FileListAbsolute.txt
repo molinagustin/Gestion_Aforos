@@ -1,0 +1,6 @@
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\bin\Release\CComun.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\bin\Release\CComun.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Release\CComun.csproj.AssemblyReference.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Release\CComun.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Release\CComun.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Release\CComun.pdb

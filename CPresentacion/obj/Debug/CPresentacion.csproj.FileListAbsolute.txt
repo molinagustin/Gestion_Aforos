@@ -21,3 +21,17 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPrese
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CAccesoDatos.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CAccesoDatos.pdb
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\SimpleCrypto.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.kernel.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.layout.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.Core.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.io.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.kernel.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.layout.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.Core.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\itext.io.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common.Logging.xml

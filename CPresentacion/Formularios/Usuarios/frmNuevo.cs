@@ -28,9 +28,7 @@ namespace CPresentacion.Formularios.Usuarios
             //Combobox Privilegios
             cboTipoUs.ValueMember = "IdPriv";
             cboTipoUs.DisplayMember = "Descripcion";            
-            cboTipoUs.DataSource = usuario.ObtenerPrivilegios();            
-            cboTipoUs.SelectedItem = 1;
-            cboTipoUs.Refresh();
+            cboTipoUs.DataSource = usuario.ObtenerPrivilegios(); 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -38,7 +36,7 @@ namespace CPresentacion.Formularios.Usuarios
             string contrasenia = txtPass1.Texts.Trim();
 
             modUsuario nuevoUsuario = new modUsuario();
-            int valorCbo = Convert.ToInt32(cboTipoUs.SelectedIndex) + 1;
+            int valorCbo = Convert.ToInt32(cboTipoUs.SelectedValue);
             int nuevoAcceso = nuevoUsuario.AgregarAcceso(chkAfoElect.Checked, chkPermisosElect.Checked);
 
             PBKDF2 cryptoService = new PBKDF2();

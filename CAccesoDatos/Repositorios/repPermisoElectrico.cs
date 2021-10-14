@@ -15,12 +15,15 @@ namespace CAccesoDatos.Repositorios
     {
         private string AgregarNuevoPermiso;
         private string ObtenerNumPermiso;
+        private string ObtenerDatosPermiso;
 
         public repPermisoElectrico()
         {
             AgregarNuevoPermiso = "insert into per_conex_electricas (Acronimo, Fecha, Expediente, TipoConex, TipoMedid, TipoObraConex, PotenciaHP, Dias, Iniciador, Domicilio, Localidad, Inspector, Observaciones, Comprobante, Importe, UsuarioCrea, FechaCrea, UsuarioModif) values (@Acronimo, @Fecha, @Expediente, @TipoConex, @TipoMedid, @TipoObraConex, @PotenciaHP, @Dias, @Iniciador, @Domicilio, @Localidad, @Inspector, @Observaciones, @Comprobante, @Importe, @UsuarioCrea, @FechaCrea, @UsuarioModif)";
 
             ObtenerNumPermiso = "select MAX(NumPermiso) from per_conex_electricas where Expediente=@Expediente";
+
+            ObtenerDatosPermiso = "select per_conex_electricas.NumPermiso, acronimos.Acronimo, per_conex_electricas.Fecha, expedientes.Anio, expedientes.Numero, expedientes.Letra, tipos_conexiones.TipoConexion, tipos_medidores.TipoMedidor, tipos_obras_declaradas_anexas.TipoObraAnexa, per_conex_electricas.PotenciaHP, per_conex_electricas.Dias, per_conex_electricas.Iniciador, per_conex_electricas.Domicilio, localidades.Localidad, profesionales.Apellido, profesionales.Nombre, profesionales_profesiones.Titulo, per_conex_electricas.Observaciones from per_conex_electricas inner join acronimos on per_conex_electricas.Acronimo = acronimos.IdAcron inner join expedientes on per_conex_electricas.Expediente = expedientes.IdExpte inner join tipos_conexiones on per_conex_electricas.TipoConex = tipos_conexiones.IdTipoConex inner join tipos_medidores on per_conex_electricas.TipoMedid = tipos_medidores.IdTipoMed inner join tipos_obras_declaradas_anexas on per_conex_electricas.TipoObraConex = tipos_obras_declaradas_anexas.IdTipoObAnex inner join localidades on per_conex_electricas.Localidad = localidades.IdLoc inner join profesionales on per_conex_electricas.Inspector = profesionales.IdProf inner join profesionales_profesiones on profesionales.Profesion = profesionales_profesiones.IdProfesion where per_conex_electricas.NumPermiso = @NumPermiso";
         }
 
         public int Agregar(entPermisoElectrico entidad)
@@ -63,6 +66,13 @@ namespace CAccesoDatos.Repositorios
         public IEnumerable<entPermisoElectrico> ObtenerRegistros()
         {
             throw new NotImplementedException();
+        }
+
+        public DataTable DatosPermisosPDF(int numPermiso)
+        {
+            parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@NumPermiso", numPermiso));
+            return ExecuteReaderWithParameters(ObtenerDatosPermiso);
         }
     }
 }
