@@ -29,9 +29,39 @@ namespace CDominio.Modelos
 
         #region Propiedades
         public int IdExpte { get => _IdExpte; set => _IdExpte = value; }
-        public string Letra { get => _Letra; set => _Letra = value; }
-        public string Anio { get => _Anio; set => _Anio = value; }
-        public string Numero { get => _Numero; set => _Numero = value; }
+        public string Letra
+        {
+            get => _Letra; 
+            set
+            {
+                if (value.Length > 0)
+                    _Letra = value;
+                else
+                    _Letra = "XXX";
+            }
+        }
+        public string Anio
+        {
+            get => _Anio; 
+            set
+            {
+                if (value != null && value != "")
+                    _Anio = value;
+                else
+                    throw new Exception("Se debe colocar un valor para el año del expediente.");
+            }
+        }
+        public string Numero
+        {
+            get => _Numero; 
+            set
+            {
+                if (value != null && value != "")
+                    _Numero = value;
+                else
+                    throw new Exception("Se debe colocar un valor para el numero del expediente.");
+            }
+        }
         public string Iniciador { get => _Iniciador; set => _Iniciador = value; }
         public string Caratula { get => _Caratula; set => _Caratula = value; }
         public bool Activo { get => _Activo; set => _Activo = value; }

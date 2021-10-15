@@ -170,6 +170,10 @@ namespace CPresentacion.ControlesPersonalizados
             }
         }
 
+        [DefaultValue(32767)]
+        [Localizable(true)]
+        public int MaxLength { get => txtInterior.MaxLength; set => txtInterior.MaxLength = value; }
+
         //Overridden methods
         protected override void OnPaint(PaintEventArgs e)
         {

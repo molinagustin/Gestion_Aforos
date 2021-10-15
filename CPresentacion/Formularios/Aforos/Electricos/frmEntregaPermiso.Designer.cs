@@ -316,14 +316,12 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboInspector.Name = "cboInspector";
             this.cboInspector.Padding = new System.Windows.Forms.Padding(1);
             this.cboInspector.Size = new System.Drawing.Size(307, 36);
-            this.cboInspector.TabIndex = 43;
+            this.cboInspector.TabIndex = 12;
             this.cboInspector.Texts = "";
             // 
             // cboLocalidad
             // 
             this.cboLocalidad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cboLocalidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cboLocalidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboLocalidad.BackColor = System.Drawing.SystemColors.Window;
             this.cboLocalidad.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cboLocalidad.BorderSize = 1;
@@ -338,7 +336,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.Padding = new System.Windows.Forms.Padding(1);
             this.cboLocalidad.Size = new System.Drawing.Size(240, 36);
-            this.cboLocalidad.TabIndex = 42;
+            this.cboLocalidad.TabIndex = 11;
             this.cboLocalidad.Texts = "";
             // 
             // cboTipoObraConex
@@ -360,7 +358,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboTipoObraConex.Name = "cboTipoObraConex";
             this.cboTipoObraConex.Padding = new System.Windows.Forms.Padding(1);
             this.cboTipoObraConex.Size = new System.Drawing.Size(461, 36);
-            this.cboTipoObraConex.TabIndex = 41;
+            this.cboTipoObraConex.TabIndex = 6;
             this.cboTipoObraConex.Texts = "";
             // 
             // cboTipoMed
@@ -380,7 +378,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboTipoMed.Name = "cboTipoMed";
             this.cboTipoMed.Padding = new System.Windows.Forms.Padding(1);
             this.cboTipoMed.Size = new System.Drawing.Size(240, 36);
-            this.cboTipoMed.TabIndex = 40;
+            this.cboTipoMed.TabIndex = 5;
             this.cboTipoMed.Texts = "";
             // 
             // cboTipoConex
@@ -400,7 +398,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboTipoConex.Name = "cboTipoConex";
             this.cboTipoConex.Padding = new System.Windows.Forms.Padding(1);
             this.cboTipoConex.Size = new System.Drawing.Size(240, 36);
-            this.cboTipoConex.TabIndex = 39;
+            this.cboTipoConex.TabIndex = 4;
             this.cboTipoConex.Texts = "";
             // 
             // btnCancelar
@@ -420,7 +418,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnCancelar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 40);
-            this.btnCancelar.TabIndex = 38;
+            this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -443,7 +441,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnLimpiar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(130, 40);
-            this.btnLimpiar.TabIndex = 37;
+            this.btnLimpiar.TabIndex = 18;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -466,7 +464,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnGenerar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(130, 40);
-            this.btnGenerar.TabIndex = 36;
+            this.btnGenerar.TabIndex = 17;
             this.btnGenerar.Text = "GENERAR";
             this.btnGenerar.TextColor = System.Drawing.Color.White;
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -483,6 +481,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtImporte.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtImporte.ForeColor = System.Drawing.Color.DimGray;
             this.txtImporte.Location = new System.Drawing.Point(626, 593);
+            this.txtImporte.MaxLength = 8;
             this.txtImporte.Multiline = false;
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -490,9 +489,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtImporte.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtImporte.PlaceholderText = "";
             this.txtImporte.Size = new System.Drawing.Size(105, 36);
-            this.txtImporte.TabIndex = 35;
-            this.txtImporte.Texts = "";
+            this.txtImporte.TabIndex = 16;
+            this.txtImporte.Texts = "0,00";
             this.txtImporte.UnderlinedStyle = false;
+            this.txtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImporte_KeyPress);
+            this.txtImporte.Leave += new System.EventHandler(this.txtImporte_Leave);
             // 
             // txtNumComp
             // 
@@ -505,6 +506,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtNumComp.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNumComp.ForeColor = System.Drawing.Color.DimGray;
             this.txtNumComp.Location = new System.Drawing.Point(396, 593);
+            this.txtNumComp.MaxLength = 10;
             this.txtNumComp.Multiline = false;
             this.txtNumComp.Name = "txtNumComp";
             this.txtNumComp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -512,9 +514,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtNumComp.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumComp.PlaceholderText = "";
             this.txtNumComp.Size = new System.Drawing.Size(129, 36);
-            this.txtNumComp.TabIndex = 31;
+            this.txtNumComp.TabIndex = 15;
             this.txtNumComp.Texts = "";
             this.txtNumComp.UnderlinedStyle = false;
+            this.txtNumComp._TextChanged += new System.EventHandler(this.txtNumComp__TextChanged);
+            this.txtNumComp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumComp_KeyPress);
             // 
             // txtAnioComp
             // 
@@ -527,6 +531,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtAnioComp.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtAnioComp.ForeColor = System.Drawing.Color.DimGray;
             this.txtAnioComp.Location = new System.Drawing.Point(270, 593);
+            this.txtAnioComp.MaxLength = 4;
             this.txtAnioComp.Multiline = false;
             this.txtAnioComp.Name = "txtAnioComp";
             this.txtAnioComp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -534,9 +539,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtAnioComp.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAnioComp.PlaceholderText = "";
             this.txtAnioComp.Size = new System.Drawing.Size(70, 36);
-            this.txtAnioComp.TabIndex = 30;
+            this.txtAnioComp.TabIndex = 14;
             this.txtAnioComp.Texts = "";
             this.txtAnioComp.UnderlinedStyle = false;
+            this.txtAnioComp._TextChanged += new System.EventHandler(this.txtAnioComp__TextChanged);
+            this.txtAnioComp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnioComp_KeyPress);
             // 
             // txtObserv
             // 
@@ -549,6 +556,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtObserv.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtObserv.ForeColor = System.Drawing.Color.DimGray;
             this.txtObserv.Location = new System.Drawing.Point(270, 543);
+            this.txtObserv.MaxLength = 200;
             this.txtObserv.Multiline = false;
             this.txtObserv.Name = "txtObserv";
             this.txtObserv.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -556,9 +564,10 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtObserv.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtObserv.PlaceholderText = "";
             this.txtObserv.Size = new System.Drawing.Size(461, 36);
-            this.txtObserv.TabIndex = 29;
+            this.txtObserv.TabIndex = 13;
             this.txtObserv.Texts = "";
             this.txtObserv.UnderlinedStyle = false;
+            this.txtObserv.Leave += new System.EventHandler(this.txtObserv_Leave);
             // 
             // txtDomicilio
             // 
@@ -571,6 +580,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDomicilio.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDomicilio.ForeColor = System.Drawing.Color.DimGray;
             this.txtDomicilio.Location = new System.Drawing.Point(270, 393);
+            this.txtDomicilio.MaxLength = 120;
             this.txtDomicilio.Multiline = false;
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -578,9 +588,10 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDomicilio.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDomicilio.PlaceholderText = "";
             this.txtDomicilio.Size = new System.Drawing.Size(461, 36);
-            this.txtDomicilio.TabIndex = 26;
+            this.txtDomicilio.TabIndex = 10;
             this.txtDomicilio.Texts = "";
             this.txtDomicilio.UnderlinedStyle = false;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // txtIniciador
             // 
@@ -593,6 +604,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtIniciador.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtIniciador.ForeColor = System.Drawing.Color.DimGray;
             this.txtIniciador.Location = new System.Drawing.Point(270, 343);
+            this.txtIniciador.MaxLength = 100;
             this.txtIniciador.Multiline = false;
             this.txtIniciador.Name = "txtIniciador";
             this.txtIniciador.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -600,9 +612,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtIniciador.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtIniciador.PlaceholderText = "";
             this.txtIniciador.Size = new System.Drawing.Size(461, 36);
-            this.txtIniciador.TabIndex = 25;
+            this.txtIniciador.TabIndex = 9;
             this.txtIniciador.Texts = "";
             this.txtIniciador.UnderlinedStyle = false;
+            this.txtIniciador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIniciador_KeyPress);
+            this.txtIniciador.Leave += new System.EventHandler(this.txtIniciador_Leave);
             // 
             // txtDias
             // 
@@ -615,6 +629,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDias.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDias.ForeColor = System.Drawing.Color.DimGray;
             this.txtDias.Location = new System.Drawing.Point(483, 293);
+            this.txtDias.MaxLength = 3;
             this.txtDias.Multiline = false;
             this.txtDias.Name = "txtDias";
             this.txtDias.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -622,9 +637,12 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDias.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDias.PlaceholderText = "";
             this.txtDias.Size = new System.Drawing.Size(94, 36);
-            this.txtDias.TabIndex = 23;
-            this.txtDias.Texts = "";
+            this.txtDias.TabIndex = 8;
+            this.txtDias.Texts = "-";
             this.txtDias.UnderlinedStyle = false;
+            this.txtDias._TextChanged += new System.EventHandler(this.txtDias__TextChanged);
+            this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDias_KeyPress);
+            this.txtDias.Leave += new System.EventHandler(this.txtDias_Leave);
             // 
             // txtPotencia
             // 
@@ -637,6 +655,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtPotencia.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPotencia.ForeColor = System.Drawing.Color.DimGray;
             this.txtPotencia.Location = new System.Drawing.Point(270, 293);
+            this.txtPotencia.MaxLength = 6;
             this.txtPotencia.Multiline = false;
             this.txtPotencia.Name = "txtPotencia";
             this.txtPotencia.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -644,9 +663,12 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtPotencia.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPotencia.PlaceholderText = "";
             this.txtPotencia.Size = new System.Drawing.Size(120, 36);
-            this.txtPotencia.TabIndex = 22;
-            this.txtPotencia.Texts = "";
+            this.txtPotencia.TabIndex = 7;
+            this.txtPotencia.Tag = "";
+            this.txtPotencia.Texts = "0,00";
             this.txtPotencia.UnderlinedStyle = false;
+            this.txtPotencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPotencia_KeyPress);
+            this.txtPotencia.Leave += new System.EventHandler(this.txtPotencia_Leave);
             // 
             // txtLetraExp
             // 
@@ -659,6 +681,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtLetraExp.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtLetraExp.ForeColor = System.Drawing.Color.DimGray;
             this.txtLetraExp.Location = new System.Drawing.Point(606, 93);
+            this.txtLetraExp.MaxLength = 3;
             this.txtLetraExp.Multiline = false;
             this.txtLetraExp.Name = "txtLetraExp";
             this.txtLetraExp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -666,9 +689,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtLetraExp.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtLetraExp.PlaceholderText = "";
             this.txtLetraExp.Size = new System.Drawing.Size(66, 36);
-            this.txtLetraExp.TabIndex = 18;
+            this.txtLetraExp.TabIndex = 3;
             this.txtLetraExp.Texts = "";
             this.txtLetraExp.UnderlinedStyle = false;
+            this.txtLetraExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetraExp_KeyPress);
+            this.txtLetraExp.Leave += new System.EventHandler(this.txtLetraExp_Leave);
             // 
             // txtNumExp
             // 
@@ -681,6 +706,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtNumExp.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNumExp.ForeColor = System.Drawing.Color.DimGray;
             this.txtNumExp.Location = new System.Drawing.Point(396, 93);
+            this.txtNumExp.MaxLength = 10;
             this.txtNumExp.Multiline = false;
             this.txtNumExp.Name = "txtNumExp";
             this.txtNumExp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -691,6 +717,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtNumExp.TabIndex = 2;
             this.txtNumExp.Texts = "";
             this.txtNumExp.UnderlinedStyle = false;
+            this.txtNumExp._TextChanged += new System.EventHandler(this.txtNumExp__TextChanged);
+            this.txtNumExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumExp_KeyPress);
             // 
             // txtAnioExp
             // 
@@ -703,6 +731,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtAnioExp.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtAnioExp.ForeColor = System.Drawing.Color.DimGray;
             this.txtAnioExp.Location = new System.Drawing.Point(270, 93);
+            this.txtAnioExp.MaxLength = 4;
             this.txtAnioExp.Multiline = false;
             this.txtAnioExp.Name = "txtAnioExp";
             this.txtAnioExp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -713,6 +742,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtAnioExp.TabIndex = 1;
             this.txtAnioExp.Texts = "";
             this.txtAnioExp.UnderlinedStyle = false;
+            this.txtAnioExp._TextChanged += new System.EventHandler(this.txtAnioExp__TextChanged);
+            this.txtAnioExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnioExp_KeyPress);
             // 
             // frmEntregaPermiso
             // 
