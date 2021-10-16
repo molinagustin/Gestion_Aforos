@@ -191,12 +191,17 @@ namespace CDominio.Modelos
             var iniciador = tablaDatos.Rows[0].ItemArray[11].ToString();
             var domicilio = tablaDatos.Rows[0].ItemArray[12].ToString();
             var localidad = tablaDatos.Rows[0].ItemArray[13].ToString();
-            var inspector = tablaDatos.Rows[0].ItemArray[16].ToString() + " " + tablaDatos.Rows[0].ItemArray[15].ToString() + " " + tablaDatos.Rows[0].ItemArray[14].ToString();
+            //Comprobar si el inspector posee un titulo o ninguno
+            var inspector = "";
+            if(tablaDatos.Rows[0].ItemArray[16].ToString() == "NINGUNO")
+                inspector = tablaDatos.Rows[0].ItemArray[15].ToString() + " " + tablaDatos.Rows[0].ItemArray[14].ToString();
+            else
+                inspector = tablaDatos.Rows[0].ItemArray[16].ToString() + " " + tablaDatos.Rows[0].ItemArray[15].ToString() + " " + tablaDatos.Rows[0].ItemArray[14].ToString();
             var entregadoPor = cacUsuario.Nombre + " " + cacUsuario.Apellido;
             var observaciones = tablaDatos.Rows[0].ItemArray[17].ToString();
 
             //Otengo la ruta directa a mis Documentos para crear ahi los pdf
-            string rutaDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Permisos Electricos";
+            string rutaDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Gestion Aforos\\Permisos Conexion Electrica";
             string rutaCompleta = rutaDir + "\\permiso_num_" + numPermiso + ".pdf";
             //Compruebo si existe la carpeta donde se guardan los pdf, si no existe se crea, pero si existe no se crea
             Directory.CreateDirectory(rutaDir);

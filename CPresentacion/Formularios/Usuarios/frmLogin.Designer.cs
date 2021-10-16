@@ -30,17 +30,17 @@ namespace CPresentacion.Formularios.Usuarios
         private void InitializeComponent()
         {
             this.panLogo = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new CPresentacion.ControlesPersonalizados.txtExterior();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.txtPass = new CPresentacion.ControlesPersonalizados.txtExterior();
             this.btnIngresar = new CPresentacion.ControlesPersonalizados.CButton();
             this.btnSalir = new CPresentacion.ControlesPersonalizados.CButton();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panLogo
@@ -53,6 +53,16 @@ namespace CPresentacion.Formularios.Usuarios
             this.panLogo.Size = new System.Drawing.Size(210, 300);
             this.panLogo.TabIndex = 0;
             // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::CPresentacion.Properties.Resources.gestion_aforos;
+            this.picLogo.Location = new System.Drawing.Point(3, 44);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(200, 200);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
@@ -60,7 +70,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.txtUsuario.BorderRadius = 0;
             this.txtUsuario.BorderSize = 2;
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.Location = new System.Drawing.Point(339, 61);
             this.txtUsuario.Multiline = false;
@@ -109,7 +119,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.txtPass.BorderRadius = 0;
             this.txtPass.BorderSize = 2;
-            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPass.ForeColor = System.Drawing.Color.DimGray;
             this.txtPass.Location = new System.Drawing.Point(339, 143);
             this.txtPass.Multiline = false;
@@ -150,6 +160,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnSalir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
             this.btnSalir.BorderRadius = 10;
             this.btnSalir.BorderSize = 0;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
@@ -162,16 +173,6 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = global::CPresentacion.Properties.Resources.gestion_aforos;
-            this.picLogo.Location = new System.Drawing.Point(3, 44);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(200, 200);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
             // 
             // frmLogin
             // 
@@ -189,19 +190,18 @@ namespace CPresentacion.Formularios.Usuarios
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panLogo);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(700, 300);
             this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogin_MouseDown);
             this.panLogo.ResumeLayout(false);
             this.panLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

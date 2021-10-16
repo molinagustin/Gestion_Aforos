@@ -16,35 +16,13 @@ using CComun.Cache;
 namespace CPresentacion.Formularios.Usuarios
 {
     public partial class frmLogin : Form
-    {       
-        //Drag Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void frmLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
+    {
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        #region Eventos
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -53,10 +31,10 @@ namespace CPresentacion.Formularios.Usuarios
                 string pass = txtPass.Texts.Trim();
 
                 if (nomUsuario != string.Empty && pass != string.Empty)
-                {
+                {                    
                     modUsuario usuario = new modUsuario();
                     usuario = usuario.ObtenerUsuario(nomUsuario);
-                    
+                   
                     if (usuario.IdUsuarioAct > 0)
                     {
                         PBKDF2 cryptoService = new PBKDF2();
@@ -93,8 +71,28 @@ namespace CPresentacion.Formularios.Usuarios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-            }            
+                MessageBox.Show(ex.Message, "Login");
+            }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
+        #region Arrastrar Formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void frmLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
     }
 }

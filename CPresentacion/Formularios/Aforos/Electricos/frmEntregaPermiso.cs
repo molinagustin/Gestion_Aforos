@@ -33,63 +33,6 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             txtAnioExp.Focus();
         }
 
-        private void btnGenerar_Click(object sender, EventArgs e)
-        {
-            var dialog = MessageBox.Show("Confirmar nuevo permiso electrico", "Permiso Electrico", MessageBoxButtons.YesNo);
-
-            if (dialog == DialogResult.Yes)
-            {
-                try
-                {
-                    int valTipoCon = Convert.ToInt32(cboTipoConex.SelectedValue);
-                    int valTipoMed = Convert.ToInt32(cboTipoMed.SelectedValue);
-                    int valTipoObCE = Convert.ToInt32(cboTipoObraConex.SelectedValue);
-                    int valLoc = Convert.ToInt32(cboLocalidad.SelectedValue);
-                    int valInspector = Convert.ToInt32(cboInspector.SelectedValue);
-                    string valComprobante = txtAnioComp.Texts.Trim() + "-" + txtNumComp.Texts.Trim();
-
-                    modPermisoElectrico permisoCE = new modPermisoElectrico();
-                    permisoCE.Acronimo = 2; //Acronimo por defecto para los Permisos Conexion Electrica (PCE)
-                    permisoCE.Fecha = DateTime.Today;
-                    permisoCE.Expediente = NumExpte();
-                    permisoCE.TipoConex = valTipoCon;
-                    permisoCE.TipoMedid = valTipoMed;
-                    permisoCE.TipoObraConex = valTipoObCE;
-                    permisoCE.PotenciaHP = Convert.ToDecimal(txtPotencia.Texts.Trim());
-                    permisoCE.Dias = txtDias.Texts.Trim();
-                    permisoCE.Iniciador = txtIniciador.Texts.Trim();
-                    permisoCE.Domicilio = txtDomicilio.Texts.Trim();
-                    permisoCE.Localidad = valLoc;
-                    permisoCE.Inspector = valInspector;
-                    permisoCE.Observaciones = txtObserv.Texts.Trim();
-                    permisoCE.Comprobante = valComprobante;
-                    permisoCE.Importe = Convert.ToDecimal(txtImporte.Texts.Trim());
-                    permisoCE.UsuarioCrea = cacUsuario.IdUsuarioAct;
-                    permisoCE.FechaCrea = DateTime.Now;
-                    permisoCE.UsuarioModif = cacUsuario.IdUsuarioAct;
-                    permisoCE.FechaUltModif = DateTime.Now;
-                    permisoCE.estado = EstadoEntidad.Agregar;
-
-                    string resultado = permisoCE.GuardarCambios();
-                    MessageBox.Show(resultado, "Permiso Electrico");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Permiso Electrico");
-                }                
-            }            
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            var dialog = MessageBox.Show("¿Limpiar todos los campos del formulario?", "Limpiar Controles", MessageBoxButtons.YesNo);
-
-            if (dialog == DialogResult.Yes)
-            {
-
-            }
-        }
-
         #region Metodos 
         private int NumExpte()
         {
@@ -166,6 +109,78 @@ namespace CPresentacion.Formularios.Aforos.Electricos
         #endregion
 
         #region Eventos 
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            var dialog = MessageBox.Show("Confirmar nuevo permiso electrico", "Permiso Electrico", MessageBoxButtons.YesNo);
+
+            if (dialog == DialogResult.Yes)
+            {
+                try
+                {
+                    int valTipoCon = Convert.ToInt32(cboTipoConex.SelectedValue);
+                    int valTipoMed = Convert.ToInt32(cboTipoMed.SelectedValue);
+                    int valTipoObCE = Convert.ToInt32(cboTipoObraConex.SelectedValue);
+                    int valLoc = Convert.ToInt32(cboLocalidad.SelectedValue);
+                    int valInspector = Convert.ToInt32(cboInspector.SelectedValue);
+                    string valComprobante = txtAnioComp.Texts.Trim() + "-" + txtNumComp.Texts.Trim();
+
+                    modPermisoElectrico permisoCE = new modPermisoElectrico();
+                    permisoCE.Acronimo = 2; //Acronimo por defecto para los Permisos Conexion Electrica (PCE)
+                    permisoCE.Fecha = DateTime.Today;
+                    permisoCE.Expediente = NumExpte();
+                    permisoCE.TipoConex = valTipoCon;
+                    permisoCE.TipoMedid = valTipoMed;
+                    permisoCE.TipoObraConex = valTipoObCE;
+                    permisoCE.PotenciaHP = Convert.ToDecimal(txtPotencia.Texts.Trim());
+                    permisoCE.Dias = txtDias.Texts.Trim();
+                    permisoCE.Iniciador = txtIniciador.Texts.Trim();
+                    permisoCE.Domicilio = txtDomicilio.Texts.Trim();
+                    permisoCE.Localidad = valLoc;
+                    permisoCE.Inspector = valInspector;
+                    permisoCE.Observaciones = txtObserv.Texts.Trim();
+                    permisoCE.Comprobante = valComprobante;
+                    permisoCE.Importe = Convert.ToDecimal(txtImporte.Texts.Trim());
+                    permisoCE.UsuarioCrea = cacUsuario.IdUsuarioAct;
+                    permisoCE.FechaCrea = DateTime.Now;
+                    permisoCE.UsuarioModif = cacUsuario.IdUsuarioAct;
+                    permisoCE.FechaUltModif = DateTime.Now;
+                    permisoCE.estado = EstadoEntidad.Agregar;
+
+                    string resultado = permisoCE.GuardarCambios();
+                    MessageBox.Show(resultado, "Permiso Electrico");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Permiso Electrico");
+                }
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            var dialog = MessageBox.Show("¿Limpiar todos los campos del formulario?", "Limpiar Controles", MessageBoxButtons.YesNo);
+
+            if (dialog == DialogResult.Yes)
+            {
+                txtAnioExp.Texts = "";
+                txtNumExp.Texts = "";
+                txtLetraExp.Texts = "";
+                cboTipoConex.SelectedIndex = 0;
+                cboTipoMed.SelectedIndex = 0;
+                cboTipoObraConex.SelectedIndex = 0;
+                txtPotencia.Texts = "0,00";
+                txtDias.Texts = "-";
+                txtIniciador.Texts = "";
+                txtDomicilio.Texts = "";
+                cboLocalidad.SelectedIndex = 0;
+                cboInspector.SelectedIndex = 0;
+                txtObserv.Texts = "";
+                txtAnioComp.Texts = "";
+                txtNumComp.Texts = "";
+                txtImporte.Texts = "0,00";
+            }
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

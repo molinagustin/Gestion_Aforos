@@ -60,7 +60,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(744, 45);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "ALTA USUARIO";
+            this.lblTitulo.Text = "ALTA DE USUARIO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCuil
@@ -166,7 +166,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.chkAfoElect.Location = new System.Drawing.Point(244, 508);
             this.chkAfoElect.Name = "chkAfoElect";
             this.chkAfoElect.Size = new System.Drawing.Size(206, 31);
-            this.chkAfoElect.TabIndex = 10;
+            this.chkAfoElect.TabIndex = 8;
             this.chkAfoElect.Text = "Aprobaciones Electricas";
             this.chkAfoElect.UseVisualStyleBackColor = true;
             // 
@@ -177,7 +177,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.chkPermisosElect.Location = new System.Drawing.Point(244, 545);
             this.chkPermisosElect.Name = "chkPermisosElect";
             this.chkPermisosElect.Size = new System.Drawing.Size(173, 31);
-            this.chkPermisosElect.TabIndex = 11;
+            this.chkPermisosElect.TabIndex = 9;
             this.chkPermisosElect.Text = "Permisos Conexion";
             this.chkPermisosElect.UseVisualStyleBackColor = true;
             // 
@@ -200,7 +200,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.cboTipoUs.Name = "cboTipoUs";
             this.cboTipoUs.Padding = new System.Windows.Forms.Padding(1);
             this.cboTipoUs.Size = new System.Drawing.Size(220, 30);
-            this.cboTipoUs.TabIndex = 46;
+            this.cboTipoUs.TabIndex = 7;
             this.cboTipoUs.Texts = "";
             // 
             // txtPass2
@@ -221,7 +221,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass2.PlaceholderText = "";
             this.txtPass2.Size = new System.Drawing.Size(179, 36);
-            this.txtPass2.TabIndex = 45;
+            this.txtPass2.TabIndex = 6;
             this.txtPass2.Texts = "";
             this.txtPass2.UnderlinedStyle = false;
             // 
@@ -243,7 +243,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass1.PlaceholderText = "";
             this.txtPass1.Size = new System.Drawing.Size(179, 36);
-            this.txtPass1.TabIndex = 44;
+            this.txtPass1.TabIndex = 5;
             this.txtPass1.Texts = "";
             this.txtPass1.UnderlinedStyle = false;
             // 
@@ -258,6 +258,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtNombreUs.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNombreUs.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombreUs.Location = new System.Drawing.Point(244, 248);
+            this.txtNombreUs.MaxLength = 15;
             this.txtNombreUs.Multiline = false;
             this.txtNombreUs.Name = "txtNombreUs";
             this.txtNombreUs.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -265,9 +266,10 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtNombreUs.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombreUs.PlaceholderText = "";
             this.txtNombreUs.Size = new System.Drawing.Size(179, 36);
-            this.txtNombreUs.TabIndex = 43;
+            this.txtNombreUs.TabIndex = 4;
             this.txtNombreUs.Texts = "";
             this.txtNombreUs.UnderlinedStyle = false;
+            this.txtNombreUs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreUs_KeyPress);
             // 
             // txtNombre
             // 
@@ -287,9 +289,11 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombre.PlaceholderText = "";
             this.txtNombre.Size = new System.Drawing.Size(179, 36);
-            this.txtNombre.TabIndex = 42;
+            this.txtNombre.TabIndex = 3;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlinedStyle = false;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtApellido
             // 
@@ -309,9 +313,11 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtApellido.PlaceholderText = "";
             this.txtApellido.Size = new System.Drawing.Size(179, 36);
-            this.txtApellido.TabIndex = 41;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.Texts = "";
             this.txtApellido.UnderlinedStyle = false;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // txtCuil
             // 
@@ -324,6 +330,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtCuil.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCuil.ForeColor = System.Drawing.Color.DimGray;
             this.txtCuil.Location = new System.Drawing.Point(244, 120);
+            this.txtCuil.MaxLength = 11;
             this.txtCuil.Multiline = false;
             this.txtCuil.Name = "txtCuil";
             this.txtCuil.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -331,9 +338,10 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtCuil.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCuil.PlaceholderText = "";
             this.txtCuil.Size = new System.Drawing.Size(179, 36);
-            this.txtCuil.TabIndex = 40;
+            this.txtCuil.TabIndex = 1;
             this.txtCuil.Texts = "";
             this.txtCuil.UnderlinedStyle = false;
+            this.txtCuil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuil_KeyPress);
             // 
             // btnCancelar
             // 
@@ -352,7 +360,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnCancelar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 40);
-            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -375,7 +383,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnGuardar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(130, 40);
-            this.btnGuardar.TabIndex = 37;
+            this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;

@@ -1,15 +1,8 @@
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CDominio.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CDominio.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CAccesoDatos.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CComun.dll
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CAccesoDatos.pdb
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CComun.pdb
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.AssemblyReference.cache
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CoreCompileInputs.cache
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CopyComplete
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.dll
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.pdb
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\Common.Logging.Core.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\Common.Logging.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.barcodes.dll
@@ -21,6 +14,8 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.pdfa.
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.sign.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.styledxmlparser.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.svg.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CAccesoDatos.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\CComun.pdb
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\BouncyCastle.Crypto.xml
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\Common.Logging.pdb
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\Common.Logging.xml
@@ -35,3 +30,8 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.pdfa.
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.sign.xml
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.styledxmlparser.xml
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Debug\itext.svg.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.AssemblyReference.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.csproj.CopyComplete
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.dll
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Debug\CDominio.pdb

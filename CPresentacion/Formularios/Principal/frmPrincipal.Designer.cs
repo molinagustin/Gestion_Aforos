@@ -84,7 +84,7 @@ namespace CPresentacion.Formularios.Principal
             this.panMenuIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panMenuIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panMenuIzquierdo.Name = "panMenuIzquierdo";
-            this.panMenuIzquierdo.Size = new System.Drawing.Size(240, 752);
+            this.panMenuIzquierdo.Size = new System.Drawing.Size(240, 768);
             this.panMenuIzquierdo.TabIndex = 0;
             // 
             // btnConfig
@@ -105,6 +105,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnConfig.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConfig.Size = new System.Drawing.Size(240, 50);
             this.btnConfig.TabIndex = 14;
+            this.btnConfig.TabStop = false;
             this.btnConfig.Tag = "CONFIGURACIONES";
             this.btnConfig.Text = "     CONFIGURACIONES";
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,6 +130,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(240, 50);
             this.btnUsuarios.TabIndex = 13;
+            this.btnUsuarios.TabStop = false;
             this.btnUsuarios.Tag = "USUARIOS";
             this.btnUsuarios.Text = "     USUARIOS";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,6 +156,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnSupJer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSupJer.Size = new System.Drawing.Size(240, 50);
             this.btnSupJer.TabIndex = 12;
+            this.btnSupJer.TabStop = false;
             this.btnSupJer.Tag = "SUPERIORES JERARQUICOS";
             this.btnSupJer.Text = "     SUPERIORES JERARQUICOS";
             this.btnSupJer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,6 +181,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnProfesionales.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProfesionales.Size = new System.Drawing.Size(240, 50);
             this.btnProfesionales.TabIndex = 8;
+            this.btnProfesionales.TabStop = false;
             this.btnProfesionales.Tag = "PROFESIONALES";
             this.btnProfesionales.Text = "     PROFESIONALES";
             this.btnProfesionales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,11 +200,12 @@ namespace CPresentacion.Formularios.Principal
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 30;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 702);
+            this.btnSalir.Location = new System.Drawing.Point(0, 718);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 15);
             this.btnSalir.Size = new System.Drawing.Size(240, 50);
             this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabStop = false;
             this.btnSalir.Tag = "SALIR";
             this.btnSalir.Text = "     SALIR";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,6 +231,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnCertif.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCertif.Size = new System.Drawing.Size(240, 50);
             this.btnCertif.TabIndex = 4;
+            this.btnCertif.TabStop = false;
             this.btnCertif.Tag = "CERTIFICADOS";
             this.btnCertif.Text = "     CERTIFICADOS";
             this.btnCertif.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,6 +256,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnAfoSan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAfoSan.Size = new System.Drawing.Size(240, 50);
             this.btnAfoSan.TabIndex = 3;
+            this.btnAfoSan.TabStop = false;
             this.btnAfoSan.Tag = "AFOROS SANITARIOS";
             this.btnAfoSan.Text = "     AFOROS SANITARIOS";
             this.btnAfoSan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,6 +281,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnAfoObr.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAfoObr.Size = new System.Drawing.Size(240, 50);
             this.btnAfoObr.TabIndex = 2;
+            this.btnAfoObr.TabStop = false;
             this.btnAfoObr.Tag = "AFOROS OBRA";
             this.btnAfoObr.Text = "     AFOROS OBRA";
             this.btnAfoObr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,6 +306,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnAfoElect.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAfoElect.Size = new System.Drawing.Size(240, 50);
             this.btnAfoElect.TabIndex = 1;
+            this.btnAfoElect.TabStop = false;
             this.btnAfoElect.Tag = "AFOROS ELECTRICOS";
             this.btnAfoElect.Text = "     AFOROS ELECTRICOS";
             this.btnAfoElect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -327,6 +336,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnEsconderMenu.Name = "btnEsconderMenu";
             this.btnEsconderMenu.Size = new System.Drawing.Size(43, 43);
             this.btnEsconderMenu.TabIndex = 1;
+            this.btnEsconderMenu.TabStop = false;
             this.btnEsconderMenu.UseVisualStyleBackColor = true;
             this.btnEsconderMenu.Click += new System.EventHandler(this.btnEsconderMenu_Click);
             // 
@@ -350,7 +360,7 @@ namespace CPresentacion.Formularios.Principal
             this.panBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panBarraSuperior.Location = new System.Drawing.Point(240, 0);
             this.panBarraSuperior.Name = "panBarraSuperior";
-            this.panBarraSuperior.Size = new System.Drawing.Size(768, 50);
+            this.panBarraSuperior.Size = new System.Drawing.Size(784, 50);
             this.panBarraSuperior.TabIndex = 1;
             this.panBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panBarraSuperior_MouseDown);
             // 
@@ -371,6 +381,7 @@ namespace CPresentacion.Formularios.Principal
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(104, 36);
             this.btnPerfil.TabIndex = 5;
+            this.btnPerfil.TabStop = false;
             this.btnPerfil.Text = "USUARIO";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -386,12 +397,13 @@ namespace CPresentacion.Formularios.Principal
             this.btnMinimizar.IconColor = System.Drawing.Color.White;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 20;
-            this.btnMinimizar.Location = new System.Drawing.Point(648, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(664, 0);
             this.btnMinimizar.MaximumSize = new System.Drawing.Size(40, 25);
             this.btnMinimizar.MinimumSize = new System.Drawing.Size(40, 25);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(40, 25);
             this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.TabStop = false;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
@@ -405,12 +417,13 @@ namespace CPresentacion.Formularios.Principal
             this.btnMaxRest.IconColor = System.Drawing.Color.White;
             this.btnMaxRest.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaxRest.IconSize = 20;
-            this.btnMaxRest.Location = new System.Drawing.Point(688, 0);
+            this.btnMaxRest.Location = new System.Drawing.Point(704, 0);
             this.btnMaxRest.MaximumSize = new System.Drawing.Size(40, 25);
             this.btnMaxRest.MinimumSize = new System.Drawing.Size(40, 25);
             this.btnMaxRest.Name = "btnMaxRest";
             this.btnMaxRest.Size = new System.Drawing.Size(40, 25);
             this.btnMaxRest.TabIndex = 3;
+            this.btnMaxRest.TabStop = false;
             this.btnMaxRest.UseVisualStyleBackColor = false;
             this.btnMaxRest.Click += new System.EventHandler(this.btnMaxRest_Click);
             // 
@@ -424,12 +437,13 @@ namespace CPresentacion.Formularios.Principal
             this.btnQuit.IconColor = System.Drawing.Color.White;
             this.btnQuit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuit.IconSize = 20;
-            this.btnQuit.Location = new System.Drawing.Point(728, 0);
+            this.btnQuit.Location = new System.Drawing.Point(744, 0);
             this.btnQuit.MaximumSize = new System.Drawing.Size(40, 25);
             this.btnQuit.MinimumSize = new System.Drawing.Size(40, 25);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(40, 25);
             this.btnQuit.TabIndex = 2;
+            this.btnQuit.TabStop = false;
             this.btnQuit.UseVisualStyleBackColor = false;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -439,7 +453,7 @@ namespace CPresentacion.Formularios.Principal
             this.panDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panDesktop.Location = new System.Drawing.Point(240, 50);
             this.panDesktop.Name = "panDesktop";
-            this.panDesktop.Size = new System.Drawing.Size(768, 702);
+            this.panDesktop.Size = new System.Drawing.Size(784, 718);
             this.panDesktop.TabIndex = 2;
             // 
             // ddmAfoElect
@@ -536,12 +550,16 @@ namespace CPresentacion.Formularios.Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 752);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.ControlBox = false;
             this.Controls.Add(this.panDesktop);
             this.Controls.Add(this.panBarraSuperior);
             this.Controls.Add(this.panMenuIzquierdo);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1360, 768);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "frmPrincipal";
             this.ShowIcon = false;

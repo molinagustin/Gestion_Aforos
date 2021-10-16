@@ -35,9 +35,45 @@ namespace CDominio.Modelos
         public EstadoEntidad estado { private get; set; }
         public int IdUsuarioAct { get => _IdUsuarioAct; set => _IdUsuarioAct = value; }
         public string CUIL { get => _CUIL; set => _CUIL = value; }
-        public string NombreUs { get => _NombreUs; set => _NombreUs = value; }
-        public string Apellido { get => _Apellido; set => _Apellido = value; }
-        public string Nombre { get => _Nombre; set => _Nombre = value; }
+        public string NombreUs
+        {
+            get => _NombreUs; 
+            set
+            {
+                if (value == null)
+                    _NombreUs = value;                
+                else if (value.Length >= 4)
+                    _NombreUs = value;
+                else
+                    throw new Exception("El nombre de usuario debe ser de 4 caracteres minimo.");
+            }
+        }
+        public string Apellido
+        {
+            get => _Apellido; 
+            set
+            {
+                if (value == null)
+                    _Apellido = value;                
+                else if (value.Length > 0)
+                    _Apellido = value;
+                else
+                    throw new Exception("Se debe colocar el apellido del usuario.");
+            }
+        }
+        public string Nombre
+        {
+            get => _Nombre; 
+            set
+            {
+                if (value == null)
+                    _Nombre = value;                
+                else if (value.Length > 0)
+                    _Nombre = value;
+                else
+                    throw new Exception("Se debe colocar el nombre del usuario.");
+            }
+        }
         public string SaltCont { get => _SaltCont; set => _SaltCont = value; }
         public string HashCont { get => _HashCont; set => _HashCont = value; }
         public int Privilegio { get => _Privilegio; set => _Privilegio = value; }
@@ -84,17 +120,17 @@ namespace CDominio.Modelos
                     case EstadoEntidad.Agregar:
                         //De ser necesario, agregar antes los metodos para realizar comprobaciones o calculos
                         if (repositorioUsuario.Agregar(usuario) > 0)
-                            mensaje = "Nuevo registro creado.";
+                            mensaje = "Alta de usuario exitosa.";
                         break;
 
                     case EstadoEntidad.Modificar:
                         if (repositorioUsuario.Editar(usuario) > 0)                        
-                            mensaje = "Registro actualizado correctamente.";   
+                            mensaje = "Usuario actualizado correctamente.";   
                         break;
 
                     case EstadoEntidad.Eliminar:
                         if (repositorioUsuario.Eliminar(IdUsuarioAct) > 0)                        
-                            mensaje = "Registro eliminado correctamente.";   
+                            mensaje = "Usuario eliminado correctamente.";   
                         break;
                 }
             }
