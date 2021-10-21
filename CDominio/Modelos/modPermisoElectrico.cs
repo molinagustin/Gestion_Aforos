@@ -173,6 +173,51 @@ namespace CDominio.Modelos
             return mensaje;
         }
 
+        public List<modPermisoElectrico> ObtenerPermisos()
+        {
+            var enumPermisos = repositorioPE.ObtenerRegistros();
+            var listaPermisos = new List<modPermisoElectrico>();
+            foreach (entPermisoElectrico permiso in enumPermisos)
+            {
+                listaPermisos.Add(new modPermisoElectrico { 
+                    NumPermiso = permiso.NumPermiso,
+                    Acronimo = permiso.Acronimo,
+                    Fecha = permiso.Fecha,
+                    Expediente = permiso.Expediente,
+                    TipoConex = permiso.TipoConex,
+                    TipoMedid = permiso.TipoMedid,
+                    TipoObraConex = permiso.TipoObraConex,
+                    PotenciaHP = permiso.PotenciaHP,
+                    Dias = permiso.Dias,
+                    Iniciador = permiso.Iniciador,
+                    Domicilio = permiso.Domicilio,
+                    Localidad = permiso.Localidad,
+                    Inspector = permiso.Inspector,
+                    Observaciones = permiso.Observaciones,
+                    Comprobante = permiso.Comprobante,
+                    Importe = permiso.Importe,
+                    UsuarioCrea = permiso.UsuarioCrea,
+                    FechaCrea = permiso.FechaCrea,
+                    UsuarioModif = permiso.UsuarioModif,
+                    FechaUltModif = permiso.FechaUltModif
+                });
+            }
+            return listaPermisos;
+        }
+
+        private string GenerarCadenaAleatoria()
+        {
+            var caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var arregloCaracteres = new Char[5];
+            var random = new Random();
+            for (int i = 0; i < arregloCaracteres.Length; i++)
+            {
+                arregloCaracteres[i] = caracteres[random.Next(caracteres.Length)];
+            }
+            var aleatorio = new String(arregloCaracteres);
+            return aleatorio;
+        }
+
         public void GenerarPdfPermiso(int numPermiso)
         {
             //Datos para el pdf
@@ -202,7 +247,8 @@ namespace CDominio.Modelos
 
             //Otengo la ruta directa a mis Documentos para crear ahi los pdf
             string rutaDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Gestion Aforos\\Permisos Conexion Electrica";
-            string rutaCompleta = rutaDir + "\\permiso_num_" + numPermiso + ".pdf";
+            var randomStamp = GenerarCadenaAleatoria();
+            string rutaCompleta = rutaDir + "\\permiso_num_" + numPermiso + "_" + randomStamp + ".pdf";
             //Compruebo si existe la carpeta donde se guardan los pdf, si no existe se crea, pero si existe no se crea
             Directory.CreateDirectory(rutaDir);
             

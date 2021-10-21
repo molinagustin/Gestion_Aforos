@@ -126,12 +126,14 @@ namespace CPresentacion.Formularios.Principal
                 ddmAfoElect.Enabled = true;
                 pERMISOSToolStripMenuItem.Enabled = true;
                 aFOROToolStripMenuItem.Enabled = true;
+                cONSULTASToolStripMenuItem.Enabled = true;
             }
             if (cacUsuario.ConexElect)
             {
                 ddmAfoElect.Enabled = true;
                 pERMISOSToolStripMenuItem.Enabled = true;
                 eNTREGANUEVOToolStripMenuItem.Enabled = true;
+                cONSULTASToolStripMenuItem.Enabled = true;
             }            
         }
         #endregion
@@ -215,7 +217,13 @@ namespace CPresentacion.Formularios.Principal
             OpenChildForm(new frmNuevo());
         }
 
-        
+        private void cONSULTASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Colapso el menu para tener mas espacio y mostrar todos los elementos
+            if (this.panMenuIzquierdo.Width > 200) //Collapse menu
+                CollapseMenu();            
+            OpenChildForm(new frmConsultasAfElec());
+        }
         #endregion
 
         #region Arrastrar Formulario y Varios Adicionales

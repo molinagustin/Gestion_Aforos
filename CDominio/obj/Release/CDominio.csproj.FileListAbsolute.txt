@@ -31,8 +31,6 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Release\itext.sig
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Release\itext.styledxmlparser.xml
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\bin\Release\itext.svg.xml
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.csproj.AssemblyReference.cache
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.Properties.Resources.resources
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.csproj.GenerateResource.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.csproj.CoreCompileInputs.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.csproj.CopyComplete
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CDominio\obj\Release\CDominio.dll

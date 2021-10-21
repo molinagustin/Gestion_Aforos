@@ -124,7 +124,7 @@ namespace CPresentacion.ControlesPersonalizados
                 if (this.DesignMode)
                     UpdateControlHeight();
             }
-        }
+        }        
 
         public string Texts
         {
@@ -173,6 +173,10 @@ namespace CPresentacion.ControlesPersonalizados
         [DefaultValue(32767)]
         [Localizable(true)]
         public int MaxLength { get => txtInterior.MaxLength; set => txtInterior.MaxLength = value; }
+
+        [DefaultValue(false)]
+        [RefreshProperties(RefreshProperties.Repaint)]
+        public bool ReadOnly { get => txtInterior.ReadOnly; set => txtInterior.ReadOnly = value; }
 
         //Overridden methods
         protected override void OnPaint(PaintEventArgs e)

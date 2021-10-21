@@ -12,6 +12,7 @@ namespace CAccesoDatos.Repositorios
         //Campos
         private string InsertarExpte;
         private string BuscarExpte;
+        private string BuscarExptes;
         private string ObtenerIdNuevoExpte;
 
         //Constructor
@@ -20,6 +21,8 @@ namespace CAccesoDatos.Repositorios
             InsertarExpte = "insert into expedientes (Letra, Anio, Numero, Iniciador, Caratula, UsuarioCrea, FechaCrea, UsuarioModif) values (@Letra, @Anio, @Numero, @Iniciador, @Caratula, @UsuarioCrea, @FechaCrea, @UsuarioModif)";
 
             BuscarExpte = "select * from expedientes where Anio=@Anio and Numero=@Numero";
+
+            BuscarExptes = "select * from expedientes";
 
             ObtenerIdNuevoExpte = "select MAX(IdExpte) from expedientes where Anio=@Anio and Numero=@Numero"; //Con esos 2 parametros, si se llegaran a cargar 2 expedientes muy rapidamente, nos aseguramos de obtener el correcto
         }
@@ -84,7 +87,31 @@ namespace CAccesoDatos.Repositorios
 
         public IEnumerable<entExpediente> ObtenerRegistros()
         {
-            throw new NotImplementedException();
+            var tabla = ExecuteReader(BuscarExptes);
+            var listaExpts = new List<entExpediente>();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                listaExpts.Add(PropiedadesExptes(fila));
+            }
+            tabla.Dispose();
+            return listaExpts;
+        }
+
+        private entExpediente PropiedadesExptes(DataRow fila)
+        {
+            var nuevoExpte = new entExpediente();
+            nuevoExpte.IdExpte = Convert.ToInt32(fila[0]);
+            nuevoExpte.Letra = fila[1].ToString();
+            nuevoExpte.Anio = fila[2].ToString();
+            nuevoExpte.Numero = fila[3].ToString();
+            nuevoExpte.Iniciador = fila[4].ToString();
+            nuevoExpte.Caratula = fila[5].ToString();
+            nuevoExpte.Activo = Convert.ToBoolean(fila[6]);
+            nuevoExpte.UsuarioCrea = Convert.ToInt32(fila[7]);
+            nuevoExpte.FechaCrea = Convert.ToDateTime(fila[8]);
+            nuevoExpte.UsuarioModif = Convert.ToInt32(fila[9]);
+            nuevoExpte.FechaUltModif = Convert.ToDateTime(fila[10]);
+            return nuevoExpte;
         }
     }
 }

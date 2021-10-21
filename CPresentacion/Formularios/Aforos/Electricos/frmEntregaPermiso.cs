@@ -75,10 +75,9 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             cboLocalidad.DataSource = localidades.obtenerLocalidades();
 
             //Inspectores
-            var listaInspectores = inspectores.ObtenerInspectores();
             cboInspector.ValueMember = "IdProf";
             cboInspector.DisplayMember = "NombreCompleto";
-            cboInspector.DataSource = listaInspectores;
+            cboInspector.DataSource = inspectores.ObtenerInspectores();
         }
 
         private void numeroPuntoComa(int indice, KeyPressEventArgs e)

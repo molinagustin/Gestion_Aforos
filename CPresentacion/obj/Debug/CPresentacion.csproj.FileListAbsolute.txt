@@ -1,6 +1,8 @@
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CPresentacion.exe.config
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CPresentacion.exe
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CPresentacion.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\GestionAforos.exe.config
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\GestionAforos.exe.manifest
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\GestionAforos.application
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\GestionAforos.exe
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\GestionAforos.pdb
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CComun.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\CDominio.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\FontAwesome.Sharp.dll
@@ -26,6 +28,7 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\bin\Debug\Common
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.csproj.AssemblyReference.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.ControlesPersonalizados.CDatePicker.resources
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.ControlesPersonalizados.TextBox.resources
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Aforos.Electricos.frmConsultasAfElec.resources
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Aforos.Electricos.frmEntregaPermiso.resources
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Principal.frmPrincipal.resources
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Usuarios.frmLogin.resources
@@ -33,6 +36,9 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPrese
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Properties.Resources.resources
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.csproj.GenerateResource.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.TrustInfo.xml
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.exe.manifest
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.application
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.csproj.CopyComplete
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.exe
-C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.exe
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.pdb

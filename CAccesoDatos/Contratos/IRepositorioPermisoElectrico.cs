@@ -11,5 +11,6 @@ namespace CAccesoDatos.Contratos
     public interface IRepositorioPermisoElectrico : IRepositorioGenerico<entPermisoElectrico>
     {
         DataTable DatosPermisosPDF(int numPermiso);
+        DataTable PermisosGenerados();
     }
 }

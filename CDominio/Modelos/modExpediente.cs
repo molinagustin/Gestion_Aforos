@@ -93,5 +93,28 @@ namespace CDominio.Modelos
 
             return repositorioExpte.Agregar(expte);
         }
+
+        public List<modExpediente> ObtenerExpedientes()
+        {
+            var enumExpts = repositorioExpte.ObtenerRegistros();
+            var listaExpts = new List<modExpediente>();
+            foreach (entExpediente exp in enumExpts)
+            {
+                listaExpts.Add(new modExpediente { 
+                    IdExpte = exp.IdExpte,
+                    Letra = exp.Letra,
+                    Anio = exp.Anio,
+                    Numero = exp.Numero,
+                    Iniciador = exp.Iniciador,
+                    Caratula = exp.Caratula,
+                    Activo = exp.Activo,
+                    UsuarioCrea = exp.UsuarioCrea,
+                    FechaCrea = exp.FechaCrea,
+                    UsuarioModif = exp.UsuarioModif,
+                    FechaUltModif = exp.FechaUltModif
+                });
+            }
+            return listaExpts;
+        }
     }
 }

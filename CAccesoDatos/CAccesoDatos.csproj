@@ -66,6 +66,7 @@
     <Compile Include="Entidades\entUsuario.cs" />
     <Compile Include="Entidades\entUsuarioPrivilegios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\repAcronimo.cs" />
     <Compile Include="Repositorios\repConexionSql.cs" />
     <Compile Include="Repositorios\repExpediente.cs" />
     <Compile Include="Repositorios\repLocalidad.cs" />

@@ -58,7 +58,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(744, 45);
+            this.lblTitulo.Size = new System.Drawing.Size(760, 45);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "ALTA DE USUARIO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +68,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblCuil.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblCuil.AutoSize = true;
             this.lblCuil.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCuil.Location = new System.Drawing.Point(52, 128);
+            this.lblCuil.Location = new System.Drawing.Point(60, 144);
             this.lblCuil.Name = "lblCuil";
             this.lblCuil.Size = new System.Drawing.Size(45, 21);
             this.lblCuil.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(435, 192);
+            this.lblNombre.Location = new System.Drawing.Point(443, 208);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 21);
             this.lblNombre.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblApellido.Location = new System.Drawing.Point(52, 192);
+            this.lblApellido.Location = new System.Drawing.Point(60, 208);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(85, 21);
             this.lblApellido.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblNombUs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblNombUs.AutoSize = true;
             this.lblNombUs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNombUs.Location = new System.Drawing.Point(52, 256);
+            this.lblNombUs.Location = new System.Drawing.Point(60, 272);
             this.lblNombUs.Name = "lblNombUs";
             this.lblNombUs.Size = new System.Drawing.Size(154, 21);
             this.lblNombUs.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblPass1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPass1.AutoSize = true;
             this.lblPass1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPass1.Location = new System.Drawing.Point(52, 320);
+            this.lblPass1.Location = new System.Drawing.Point(60, 336);
             this.lblPass1.Name = "lblPass1";
             this.lblPass1.Size = new System.Drawing.Size(117, 21);
             this.lblPass1.TabIndex = 6;
@@ -128,7 +128,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblPass2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPass2.AutoSize = true;
             this.lblPass2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPass2.Location = new System.Drawing.Point(52, 384);
+            this.lblPass2.Location = new System.Drawing.Point(60, 400);
             this.lblPass2.Name = "lblPass2";
             this.lblPass2.Size = new System.Drawing.Size(183, 21);
             this.lblPass2.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblTipoUs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblTipoUs.AutoSize = true;
             this.lblTipoUs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTipoUs.Location = new System.Drawing.Point(52, 448);
+            this.lblTipoUs.Location = new System.Drawing.Point(60, 464);
             this.lblTipoUs.Name = "lblTipoUs";
             this.lblTipoUs.Size = new System.Drawing.Size(121, 21);
             this.lblTipoUs.TabIndex = 8;
@@ -152,7 +152,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.lblAccesos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblAccesos.AutoSize = true;
             this.lblAccesos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAccesos.Location = new System.Drawing.Point(52, 512);
+            this.lblAccesos.Location = new System.Drawing.Point(60, 528);
             this.lblAccesos.Name = "lblAccesos";
             this.lblAccesos.Size = new System.Drawing.Size(80, 21);
             this.lblAccesos.TabIndex = 9;
@@ -163,7 +163,7 @@ namespace CPresentacion.Formularios.Usuarios
             // 
             this.chkAfoElect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chkAfoElect.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.chkAfoElect.Location = new System.Drawing.Point(244, 508);
+            this.chkAfoElect.Location = new System.Drawing.Point(252, 524);
             this.chkAfoElect.Name = "chkAfoElect";
             this.chkAfoElect.Size = new System.Drawing.Size(206, 31);
             this.chkAfoElect.TabIndex = 8;
@@ -174,7 +174,7 @@ namespace CPresentacion.Formularios.Usuarios
             // 
             this.chkPermisosElect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chkPermisosElect.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.chkPermisosElect.Location = new System.Drawing.Point(244, 545);
+            this.chkPermisosElect.Location = new System.Drawing.Point(252, 561);
             this.chkPermisosElect.Name = "chkPermisosElect";
             this.chkPermisosElect.Size = new System.Drawing.Size(173, 31);
             this.chkPermisosElect.TabIndex = 9;
@@ -195,7 +195,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.cboTipoUs.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cboTipoUs.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cboTipoUs.ListTextColor = System.Drawing.Color.DimGray;
-            this.cboTipoUs.Location = new System.Drawing.Point(244, 443);
+            this.cboTipoUs.Location = new System.Drawing.Point(252, 459);
             this.cboTipoUs.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboTipoUs.Name = "cboTipoUs";
             this.cboTipoUs.Padding = new System.Windows.Forms.Padding(1);
@@ -213,7 +213,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass2.BorderSize = 1;
             this.txtPass2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPass2.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPass2.Location = new System.Drawing.Point(244, 376);
+            this.txtPass2.Location = new System.Drawing.Point(252, 392);
             this.txtPass2.Multiline = false;
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -235,7 +235,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass1.BorderSize = 1;
             this.txtPass1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPass1.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPass1.Location = new System.Drawing.Point(244, 312);
+            this.txtPass1.Location = new System.Drawing.Point(252, 328);
             this.txtPass1.Multiline = false;
             this.txtPass1.Name = "txtPass1";
             this.txtPass1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -257,7 +257,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtNombreUs.BorderSize = 1;
             this.txtNombreUs.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNombreUs.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreUs.Location = new System.Drawing.Point(244, 248);
+            this.txtNombreUs.Location = new System.Drawing.Point(252, 264);
             this.txtNombreUs.MaxLength = 15;
             this.txtNombreUs.Multiline = false;
             this.txtNombreUs.Name = "txtNombreUs";
@@ -281,7 +281,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtNombre.BorderSize = 1;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(520, 184);
+            this.txtNombre.Location = new System.Drawing.Point(528, 200);
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -305,7 +305,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtApellido.BorderSize = 1;
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellido.Location = new System.Drawing.Point(244, 184);
+            this.txtApellido.Location = new System.Drawing.Point(252, 200);
             this.txtApellido.Multiline = false;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -329,7 +329,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtCuil.BorderSize = 1;
             this.txtCuil.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCuil.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCuil.Location = new System.Drawing.Point(244, 120);
+            this.txtCuil.Location = new System.Drawing.Point(252, 136);
             this.txtCuil.MaxLength = 11;
             this.txtCuil.Multiline = false;
             this.txtCuil.Name = "txtCuil";
@@ -355,7 +355,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(410, 633);
+            this.btnCancelar.Location = new System.Drawing.Point(418, 649);
             this.btnCancelar.MaximumSize = new System.Drawing.Size(130, 40);
             this.btnCancelar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnCancelar.Name = "btnCancelar";
@@ -378,7 +378,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(181, 633);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 649);
             this.btnGuardar.MaximumSize = new System.Drawing.Size(130, 40);
             this.btnGuardar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnGuardar.Name = "btnGuardar";
@@ -393,7 +393,7 @@ namespace CPresentacion.Formularios.Usuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(768, 702);
+            this.ClientSize = new System.Drawing.Size(784, 718);
             this.ControlBox = false;
             this.Controls.Add(this.cboTipoUs);
             this.Controls.Add(this.txtPass2);
@@ -417,7 +417,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(768, 702);
+            this.MinimumSize = new System.Drawing.Size(784, 718);
             this.Name = "frmNuevo";
             this.Load += new System.EventHandler(this.frmNuevo_Load);
             this.ResumeLayout(false);

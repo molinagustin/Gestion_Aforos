@@ -54,6 +54,7 @@ namespace CPresentacion.Formularios.Principal
             this.pERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aFOROToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eNTREGANUEVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONSULTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ddmUsuarios = new CPresentacion.ControlesPersonalizados.CDropdownMenu(this.components);
             this.nUEVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mODIFICARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -464,12 +465,13 @@ namespace CPresentacion.Formularios.Principal
             this.ddmAfoElect.IsMainMenu = false;
             this.ddmAfoElect.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aPROBACIONPLANOToolStripMenuItem,
-            this.pERMISOSToolStripMenuItem});
+            this.pERMISOSToolStripMenuItem,
+            this.cONSULTASToolStripMenuItem});
             this.ddmAfoElect.MenuItemHeight = 25;
             this.ddmAfoElect.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmAfoElect.Name = "ddmAfoElect";
             this.ddmAfoElect.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmAfoElect.Size = new System.Drawing.Size(201, 48);
+            this.ddmAfoElect.Size = new System.Drawing.Size(201, 70);
             // 
             // aPROBACIONPLANOToolStripMenuItem
             // 
@@ -502,6 +504,14 @@ namespace CPresentacion.Formularios.Principal
             this.eNTREGANUEVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eNTREGANUEVOToolStripMenuItem.Text = "ENTREGA NUEVO";
             this.eNTREGANUEVOToolStripMenuItem.Click += new System.EventHandler(this.eNTREGANUEVOToolStripMenuItem_Click);
+            // 
+            // cONSULTASToolStripMenuItem
+            // 
+            this.cONSULTASToolStripMenuItem.Enabled = false;
+            this.cONSULTASToolStripMenuItem.Name = "cONSULTASToolStripMenuItem";
+            this.cONSULTASToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.cONSULTASToolStripMenuItem.Text = "CONSULTAS";
+            this.cONSULTASToolStripMenuItem.Click += new System.EventHandler(this.cONSULTASToolStripMenuItem_Click);
             // 
             // ddmUsuarios
             // 
@@ -608,5 +618,6 @@ namespace CPresentacion.Formularios.Principal
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnSupJer;
         private FontAwesome.Sharp.IconButton btnProfesionales;
+        private System.Windows.Forms.ToolStripMenuItem cONSULTASToolStripMenuItem;
     }
 }
