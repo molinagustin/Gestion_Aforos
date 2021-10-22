@@ -18,6 +18,7 @@ namespace CAccesoDatos.Repositorios
         private string ObtenerDatosPermiso;
         private string ObtenerPermisosEntregados;
         private string ObtenerPermisos;
+        private string ActualizarPermiso;
 
         public repPermisoElectrico()
         {
@@ -27,32 +28,17 @@ namespace CAccesoDatos.Repositorios
 
             ObtenerDatosPermiso = "select per_conex_electricas.NumPermiso, acronimos.Acronimo, per_conex_electricas.Fecha, expedientes.Anio, expedientes.Numero, expedientes.Letra, tipos_conexiones.TipoConexion, tipos_medidores.TipoMedidor, tipos_obras_declaradas_anexas.TipoObraAnexa, per_conex_electricas.PotenciaHP, per_conex_electricas.Dias, per_conex_electricas.Iniciador, per_conex_electricas.Domicilio, localidades.Localidad, profesionales.Apellido, profesionales.Nombre, profesionales_profesiones.Titulo, per_conex_electricas.Observaciones from per_conex_electricas inner join acronimos on per_conex_electricas.Acronimo = acronimos.IdAcron inner join expedientes on per_conex_electricas.Expediente = expedientes.IdExpte inner join tipos_conexiones on per_conex_electricas.TipoConex = tipos_conexiones.IdTipoConex inner join tipos_medidores on per_conex_electricas.TipoMedid = tipos_medidores.IdTipoMed inner join tipos_obras_declaradas_anexas on per_conex_electricas.TipoObraConex = tipos_obras_declaradas_anexas.IdTipoObAnex inner join localidades on per_conex_electricas.Localidad = localidades.IdLoc inner join profesionales on per_conex_electricas.Inspector = profesionales.IdProf inner join profesionales_profesiones on profesionales.Profesion = profesionales_profesiones.IdProfesion where per_conex_electricas.NumPermiso = @NumPermiso";
 
-            ObtenerPermisosEntregados = "select per_conex_electricas.NumPermiso, per_conex_electricas.Fecha, usuarios.NombreUs, per_conex_electricas.FechaCrea, usuarios.NombreUs, per_conex_electricas.FechaUltModif from per_conex_electricas inner join usuarios on per_conex_electricas.UsuarioCrea = usuarios.IdUsuarioAct and per_conex_electricas.UsuarioModif = usuarios.IdUsuarioAct";
+            ObtenerPermisosEntregados = "select per_conex_electricas.NumPermiso, per_conex_electricas.Fecha, usuarios1.NombreUs, per_conex_electricas.FechaCrea, usuarios2.NombreUs, per_conex_electricas.FechaUltModif from per_conex_electricas inner join usuarios as usuarios1 on per_conex_electricas.UsuarioCrea = usuarios1.IdUsuarioAct inner join usuarios as usuarios2 on per_conex_electricas.UsuarioModif = usuarios2.IdUsuarioAct";
 
             ObtenerPermisos = "select * from per_conex_electricas";
+
+            ActualizarPermiso = "update per_conex_electricas set Acronimo=@Acronimo, Fecha=@Fecha, Expediente=@Expediente, TipoConex=@TipoConex, TipoMedid=@TipoMedid, TipoObraConex=@TipoObraConex, PotenciaHP=@PotenciaHP, Dias=@Dias, Iniciador=@Iniciador, Domicilio=@Domicilio, Localidad=@Localidad, Inspector=@Inspector, Observaciones=@Observaciones, Comprobante=@Comprobante, Importe=@Importe, UsuarioCrea=@UsuarioCrea, FechaCrea=@FechaCrea, UsuarioModif=@UsuarioModif, FechaUltModif=@FechaUltModif where NumPermiso=@NumPermiso";
         }
 
         public int Agregar(entPermisoElectrico entidad)
         {
             parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@Acronimo", entidad.Acronimo));
-            parametros.Add(new SqlParameter("@Fecha", entidad.Fecha));
-            parametros.Add(new SqlParameter("@Expediente", entidad.Expediente));
-            parametros.Add(new SqlParameter("@TipoConex", entidad.TipoConex));
-            parametros.Add(new SqlParameter("@TipoMedid", entidad.TipoMedid));
-            parametros.Add(new SqlParameter("@TipoObraConex", entidad.TipoObraConex));
-            parametros.Add(new SqlParameter("@PotenciaHP", entidad.PotenciaHP));
-            parametros.Add(new SqlParameter("@Dias", entidad.Dias));
-            parametros.Add(new SqlParameter("@Iniciador", entidad.Iniciador));
-            parametros.Add(new SqlParameter("@Domicilio", entidad.Domicilio));
-            parametros.Add(new SqlParameter("@Localidad", entidad.Localidad));
-            parametros.Add(new SqlParameter("@Inspector", entidad.Inspector));
-            parametros.Add(new SqlParameter("@Observaciones", entidad.Observaciones));
-            parametros.Add(new SqlParameter("@Comprobante", entidad.Comprobante));
-            parametros.Add(new SqlParameter("@Importe", entidad.Importe));
-            parametros.Add(new SqlParameter("@UsuarioCrea", entidad.UsuarioCrea));
-            parametros.Add(new SqlParameter("@FechaCrea", entidad.FechaCrea));
-            parametros.Add(new SqlParameter("@UsuarioModif", entidad.UsuarioModif));
+            ParametrosPerElect(ref parametros, entidad);
                         
             ExecuteNonQuery(AgregarNuevoPermiso);
             parametros.Add(new SqlParameter("@Expediente", entidad.Expediente));
@@ -61,7 +47,11 @@ namespace CAccesoDatos.Repositorios
 
         public int Editar(entPermisoElectrico entidad)
         {
-            throw new NotImplementedException();
+            parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@NumPermiso", entidad.NumPermiso));
+            ParametrosPerElect(ref parametros, entidad);
+
+            return ExecuteNonQuery(ActualizarPermiso);
         }
 
         public int Eliminar(int idPk)
@@ -112,6 +102,29 @@ namespace CAccesoDatos.Repositorios
         public DataTable PermisosGenerados()
         {
             return ExecuteReader(ObtenerPermisosEntregados);
+        }
+
+        private void ParametrosPerElect(ref List<SqlParameter> parametros, entPermisoElectrico permiso)
+        {
+            parametros.Add(new SqlParameter("@Acronimo", permiso.Acronimo));
+            parametros.Add(new SqlParameter("@Fecha", permiso.Fecha));
+            parametros.Add(new SqlParameter("@Expediente", permiso.Expediente));
+            parametros.Add(new SqlParameter("@TipoConex", permiso.TipoConex));
+            parametros.Add(new SqlParameter("@TipoMedid", permiso.TipoMedid));
+            parametros.Add(new SqlParameter("@TipoObraConex", permiso.TipoObraConex));
+            parametros.Add(new SqlParameter("@PotenciaHP", permiso.PotenciaHP));
+            parametros.Add(new SqlParameter("@Dias", permiso.Dias));
+            parametros.Add(new SqlParameter("@Iniciador", permiso.Iniciador));
+            parametros.Add(new SqlParameter("@Domicilio", permiso.Domicilio));
+            parametros.Add(new SqlParameter("@Localidad", permiso.Localidad));
+            parametros.Add(new SqlParameter("@Inspector", permiso.Inspector));
+            parametros.Add(new SqlParameter("@Observaciones", permiso.Observaciones));
+            parametros.Add(new SqlParameter("@Comprobante", permiso.Comprobante));
+            parametros.Add(new SqlParameter("@Importe", permiso.Importe));
+            parametros.Add(new SqlParameter("@UsuarioCrea", permiso.UsuarioCrea));
+            parametros.Add(new SqlParameter("@FechaCrea", permiso.FechaCrea));
+            parametros.Add(new SqlParameter("@UsuarioModif", permiso.UsuarioModif));
+            parametros.Add(new SqlParameter("@FechaUltModif", permiso.FechaUltModif));
         }
     }
 }

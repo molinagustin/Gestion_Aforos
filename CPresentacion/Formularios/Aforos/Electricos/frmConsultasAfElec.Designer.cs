@@ -51,6 +51,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.lblAnioExp = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
             this.lblImporte = new System.Windows.Forms.Label();
+            this.btnCancelModif = new CPresentacion.ControlesPersonalizados.CButton();
+            this.btnGuardar = new CPresentacion.ControlesPersonalizados.CButton();
             this.txtImporte = new CPresentacion.ControlesPersonalizados.txtExterior();
             this.txtComprobante = new CPresentacion.ControlesPersonalizados.txtExterior();
             this.txtObserv = new CPresentacion.ControlesPersonalizados.txtExterior();
@@ -344,6 +346,56 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.lblImporte.Text = "Importe";
             this.lblImporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnCancelModif
+            // 
+            this.btnCancelModif.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelModif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
+            this.btnCancelModif.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
+            this.btnCancelModif.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelModif.BorderRadius = 8;
+            this.btnCancelModif.BorderSize = 0;
+            this.btnCancelModif.Enabled = false;
+            this.btnCancelModif.FlatAppearance.BorderSize = 0;
+            this.btnCancelModif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelModif.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelModif.ForeColor = System.Drawing.Color.White;
+            this.btnCancelModif.Location = new System.Drawing.Point(593, 666);
+            this.btnCancelModif.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnCancelModif.MinimumSize = new System.Drawing.Size(130, 40);
+            this.btnCancelModif.Name = "btnCancelModif";
+            this.btnCancelModif.Size = new System.Drawing.Size(130, 40);
+            this.btnCancelModif.TabIndex = 63;
+            this.btnCancelModif.Text = "CANCELAR";
+            this.btnCancelModif.TextColor = System.Drawing.Color.White;
+            this.btnCancelModif.UseVisualStyleBackColor = false;
+            this.btnCancelModif.Visible = false;
+            this.btnCancelModif.Click += new System.EventHandler(this.btnCancelModif_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderRadius = 8;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(231, 666);
+            this.btnGuardar.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnGuardar.MinimumSize = new System.Drawing.Size(130, 40);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(130, 40);
+            this.btnGuardar.TabIndex = 62;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.TextColor = System.Drawing.Color.White;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Visible = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // txtImporte
             // 
             this.txtImporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -367,6 +419,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtImporte.TabIndex = 60;
             this.txtImporte.Texts = "0,00";
             this.txtImporte.UnderlinedStyle = false;
+            this.txtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImporte_KeyPress);
+            this.txtImporte.Leave += new System.EventHandler(this.txtImporte_Leave);
             // 
             // txtComprobante
             // 
@@ -380,7 +434,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtComprobante.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtComprobante.ForeColor = System.Drawing.Color.DimGray;
             this.txtComprobante.Location = new System.Drawing.Point(499, 618);
-            this.txtComprobante.MaxLength = 200;
+            this.txtComprobante.MaxLength = 16;
             this.txtComprobante.Multiline = false;
             this.txtComprobante.Name = "txtComprobante";
             this.txtComprobante.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -415,6 +469,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtObserv.TabIndex = 58;
             this.txtObserv.Texts = "";
             this.txtObserv.UnderlinedStyle = false;
+            this.txtObserv.Leave += new System.EventHandler(this.txtObserv_Leave);
             // 
             // cboInspector
             // 
@@ -483,6 +538,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDomicilio.TabIndex = 54;
             this.txtDomicilio.Texts = "";
             this.txtDomicilio.UnderlinedStyle = false;
+            this.txtDomicilio.Leave += new System.EventHandler(this.txtDomicilio_Leave);
             // 
             // txtIniciador
             // 
@@ -507,6 +563,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtIniciador.TabIndex = 53;
             this.txtIniciador.Texts = "";
             this.txtIniciador.UnderlinedStyle = false;
+            this.txtIniciador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIniciador_KeyPress);
+            this.txtIniciador.Leave += new System.EventHandler(this.txtIniciador_Leave);
             // 
             // txtDias
             // 
@@ -529,8 +587,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDias.PlaceholderText = "";
             this.txtDias.Size = new System.Drawing.Size(94, 30);
             this.txtDias.TabIndex = 52;
-            this.txtDias.Texts = "-";
+            this.txtDias.Texts = "---";
             this.txtDias.UnderlinedStyle = false;
+            this.txtDias._TextChanged += new System.EventHandler(this.txtDias__TextChanged);
+            this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDias_KeyPress);
+            this.txtDias.Leave += new System.EventHandler(this.txtDias_Leave);
             // 
             // txtPotencia
             // 
@@ -556,6 +617,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtPotencia.Tag = "";
             this.txtPotencia.Texts = "0,00";
             this.txtPotencia.UnderlinedStyle = false;
+            this.txtPotencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPotencia_KeyPress);
+            this.txtPotencia.Leave += new System.EventHandler(this.txtPotencia_Leave);
             // 
             // cboTipoObraConex
             // 
@@ -645,6 +708,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtLetraExp.TabIndex = 44;
             this.txtLetraExp.Texts = "";
             this.txtLetraExp.UnderlinedStyle = false;
+            this.txtLetraExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetraExp_KeyPress);
+            this.txtLetraExp.Leave += new System.EventHandler(this.txtLetraExp_Leave);
             // 
             // txtNumExp
             // 
@@ -669,6 +734,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtNumExp.TabIndex = 43;
             this.txtNumExp.Texts = "";
             this.txtNumExp.UnderlinedStyle = false;
+            this.txtNumExp._TextChanged += new System.EventHandler(this.txtNumExp__TextChanged);
+            this.txtNumExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumExp_KeyPress);
             // 
             // txtAnioExp
             // 
@@ -693,6 +760,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtAnioExp.TabIndex = 42;
             this.txtAnioExp.Texts = "";
             this.txtAnioExp.UnderlinedStyle = false;
+            this.txtAnioExp._TextChanged += new System.EventHandler(this.txtAnioExp__TextChanged);
+            this.txtAnioExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnioExp_KeyPress);
             // 
             // btnModificar
             // 
@@ -702,7 +771,6 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnModificar.BorderRadius = 8;
             this.btnModificar.BorderSize = 0;
-            this.btnModificar.Enabled = false;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -716,6 +784,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnImprimir
             // 
@@ -813,6 +882,8 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(924, 718);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancelModif);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.txtComprobante);
@@ -911,5 +982,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
         private ControlesPersonalizados.txtExterior txtComprobante;
         private ControlesPersonalizados.txtExterior txtImporte;
         private System.Windows.Forms.Label lblImporte;
+        private ControlesPersonalizados.CButton btnGuardar;
+        private ControlesPersonalizados.CButton btnCancelModif;
     }
 }

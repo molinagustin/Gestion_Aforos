@@ -14,6 +14,7 @@ namespace CAccesoDatos.Repositorios
         private string BuscarExpte;
         private string BuscarExptes;
         private string ObtenerIdNuevoExpte;
+        private string ActualizarExpte;
 
         //Constructor
         public repExpediente()
@@ -25,8 +26,9 @@ namespace CAccesoDatos.Repositorios
             BuscarExptes = "select * from expedientes";
 
             ObtenerIdNuevoExpte = "select MAX(IdExpte) from expedientes where Anio=@Anio and Numero=@Numero"; //Con esos 2 parametros, si se llegaran a cargar 2 expedientes muy rapidamente, nos aseguramos de obtener el correcto
-        }
 
+            ActualizarExpte = "update expedientes set Letra=@Letra, Anio=@Anio, Numero=@Numero, Iniciador=@Iniciador, Caratula=@Caratula, Activo=@Activo, UsuarioCrea=@UsuarioCrea, FechaCrea=@FechaCrea, UsuarioModif=@UsuarioModif, FechaUltModif=@FechaUltModif where IdExpte=@IdExpte";
+        }
 
         public int Agregar(entExpediente entidad)
         {
@@ -77,7 +79,20 @@ namespace CAccesoDatos.Repositorios
 
         public int Editar(entExpediente entidad)
         {
-            throw new NotImplementedException();
+            parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@IdExpte", entidad.IdExpte));
+            parametros.Add(new SqlParameter("@Letra", entidad.Letra));
+            parametros.Add(new SqlParameter("@Anio", entidad.Anio));
+            parametros.Add(new SqlParameter("@Numero", entidad.Numero));
+            parametros.Add(new SqlParameter("@Iniciador", entidad.Iniciador));
+            parametros.Add(new SqlParameter("@Caratula", entidad.Caratula));
+            parametros.Add(new SqlParameter("@Activo", entidad.Activo));
+            parametros.Add(new SqlParameter("@UsuarioCrea", entidad.UsuarioCrea));
+            parametros.Add(new SqlParameter("@FechaCrea", entidad.FechaCrea));
+            parametros.Add(new SqlParameter("@UsuarioModif", entidad.UsuarioModif));
+            parametros.Add(new SqlParameter("@FechaUltModif", entidad.FechaUltModif));
+
+            return ExecuteNonQuery(ActualizarExpte);
         }
 
         public int Eliminar(int idPk)

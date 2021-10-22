@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CAccesoDatos.Contratos;
 using CAccesoDatos.Entidades;
 using CAccesoDatos.Repositorios;
+using CDominio.ObjetosDeValor;
 
 namespace CDominio.Modelos
 {
@@ -28,6 +29,8 @@ namespace CDominio.Modelos
         #endregion
 
         #region Propiedades
+        //Estado para definir si es Agregar, Modificar o Eliminar
+        public EstadoEntidad estado { private get; set; }
         public int IdExpte { get => _IdExpte; set => _IdExpte = value; }
         public string Letra
         {
@@ -76,9 +79,11 @@ namespace CDominio.Modelos
             repositorioExpte = new repExpediente();
         }
 
-        public int AgregarExpte()
+        public int GuardarCambios()
         {
-            entExpediente expte = new entExpediente();
+            var status = 0;
+            
+            var expte = new entExpediente();
             expte.IdExpte = IdExpte;
             expte.Letra = Letra;
             expte.Anio = Anio;
@@ -91,8 +96,18 @@ namespace CDominio.Modelos
             expte.UsuarioModif = UsuarioModif;
             expte.FechaUltModif = FechaUltModif;
 
-            return repositorioExpte.Agregar(expte);
-        }
+            switch (estado)
+            {
+                case EstadoEntidad.Agregar:
+                    status = repositorioExpte.Agregar(expte);
+                    break;
+                case EstadoEntidad.Modificar:
+                    status = repositorioExpte.Editar(expte);                    
+                    break;
+            }                       
+
+            return status;
+        }       
 
         public List<modExpediente> ObtenerExpedientes()
         {

@@ -9,7 +9,6 @@ using CAccesoDatos.Entidades;
 using CAccesoDatos.Repositorios;
 using CDominio.ObjetosDeValor;
 using CComun.Cache;
-using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
@@ -119,12 +118,10 @@ namespace CDominio.Modelos
             repositorioPE = new repPermisoElectrico();
         }
 
-        public string GuardarCambios()
+        public int GuardarCambios()
         {
-            string mensaje = "";
+            int status = 0;
 
-            try
-            {
                 var permisoCE = new entPermisoElectrico();
                 permisoCE.NumPermiso = NumPermiso;
                 permisoCE.Acronimo = Acronimo;
@@ -154,23 +151,19 @@ namespace CDominio.Modelos
                         var numPermiso = repositorioPE.Agregar(permisoCE);
                         if (numPermiso > 0)
                         {
-                            mensaje = "Se genero correctamente el permiso n° " + numPermiso;
+                            status = numPermiso;
                             GenerarPdfPermiso(numPermiso);
-                        }
-                        else
-                            mensaje = "No se pudo generar el permiso";
+                        }                        
                         break;
 
                     case EstadoEntidad.Modificar:
-                        throw new NotImplementedException();
-                }
-            }
-            catch (Exception ex)
-            {
-                mensaje = ex.Message;                
-            }
+                        status = repositorioPE.Editar(permisoCE);
+                        if (status > 0)
+                            status = permisoCE.NumPermiso;
+                        break;
+                }            
 
-            return mensaje;
+            return status;
         }
 
         public List<modPermisoElectrico> ObtenerPermisos()

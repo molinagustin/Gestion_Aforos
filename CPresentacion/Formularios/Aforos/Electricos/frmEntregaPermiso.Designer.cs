@@ -325,7 +325,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.cboLocalidad.BackColor = System.Drawing.SystemColors.Window;
             this.cboLocalidad.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cboLocalidad.BorderSize = 1;
-            this.cboLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLocalidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalidad.ForeColor = System.Drawing.Color.DimGray;
             this.cboLocalidad.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -638,7 +638,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.txtDias.PlaceholderText = "";
             this.txtDias.Size = new System.Drawing.Size(94, 36);
             this.txtDias.TabIndex = 8;
-            this.txtDias.Texts = "-";
+            this.txtDias.Texts = "---";
             this.txtDias.UnderlinedStyle = false;
             this.txtDias._TextChanged += new System.EventHandler(this.txtDias__TextChanged);
             this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDias_KeyPress);

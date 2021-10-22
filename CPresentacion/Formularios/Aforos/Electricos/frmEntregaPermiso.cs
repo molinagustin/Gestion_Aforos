@@ -48,8 +48,9 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             expte.FechaCrea = DateTime.Now;
             expte.UsuarioModif = cacUsuario.IdUsuarioAct;
             expte.FechaUltModif = DateTime.Now;
+            expte.estado = EstadoEntidad.Agregar;
             
-            return expte.AgregarExpte();
+            return expte.GuardarCambios();
         }
 
         private void CargarCbos()
@@ -145,8 +146,11 @@ namespace CPresentacion.Formularios.Aforos.Electricos
                     permisoCE.FechaUltModif = DateTime.Now;
                     permisoCE.estado = EstadoEntidad.Agregar;
 
-                    string resultado = permisoCE.GuardarCambios();
-                    MessageBox.Show(resultado, "Permiso Electrico");
+                    int resultado = permisoCE.GuardarCambios();
+                    if (resultado > 0)
+                        MessageBox.Show("Se genero correctamente el permiso n° " + resultado, "Permiso Electrico");
+                    else
+                        throw new Exception("No se pudo generar el permiso, verificar los campos completados.");
                 }
                 catch (Exception ex)
                 {
@@ -294,7 +298,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
         private void txtDias_Leave(object sender, EventArgs e)
         {
             if (txtDias.Texts == null || txtDias.Texts == "")
-                txtDias.Texts = "-";
+                txtDias.Texts = "---";
         }
 
         private void txtImporte_Leave(object sender, EventArgs e)
