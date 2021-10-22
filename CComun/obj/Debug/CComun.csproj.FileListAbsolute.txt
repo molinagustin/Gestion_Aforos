@@ -1,5 +1,6 @@
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\bin\Debug\CComun.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\bin\Debug\CComun.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Debug\CComun.csproj.AssemblyReference.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Debug\CComun.csproj.CoreCompileInputs.cache
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Debug\CComun.dll
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CComun\obj\Debug\CComun.pdb

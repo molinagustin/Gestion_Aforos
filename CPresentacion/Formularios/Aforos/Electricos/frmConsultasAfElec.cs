@@ -401,6 +401,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             var elementoActual = datosAcros.Find(f => f.IdAcron == Convert.ToByte(cboTipoAforo.SelectedValue));
             lblDescTipo.Text = elementoActual.Descripcion;
             CargarDGV(cboTipoAforo.SelectedIndex);
+            numPerSelect = -1;
         }
              
         private void txtNumPermiso_KeyPress(object sender, KeyPressEventArgs e)

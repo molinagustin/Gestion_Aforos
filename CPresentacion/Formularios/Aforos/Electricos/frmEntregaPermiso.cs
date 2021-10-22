@@ -172,7 +172,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
                 cboTipoMed.SelectedIndex = 0;
                 cboTipoObraConex.SelectedIndex = 0;
                 txtPotencia.Texts = "0,00";
-                txtDias.Texts = "-";
+                txtDias.Texts = "---";
                 txtIniciador.Texts = "";
                 txtDomicilio.Texts = "";
                 cboLocalidad.SelectedIndex = 0;
