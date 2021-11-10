@@ -95,10 +95,14 @@ namespace CPresentacion.Formularios.Usuarios
                             nuevoUsuario.FechaUltModif = DateTime.Now;
                             nuevoUsuario.estado = EstadoEntidad.Agregar;
 
-                            string resultado = nuevoUsuario.GuardarCambios();
-                            MessageBox.Show(resultado, "Alta Usuario");
-                            if (MessageBox.Show("¿Desea limpiar los formularios?", "Alta Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                                limpiarControles();
+                            if (nuevoUsuario.GuardarCambios() > 0)
+                            {
+                                MessageBox.Show("Se agrego el nuevo usuario de forma exitosa.", "Alta Usuario");
+                                if (MessageBox.Show("¿Desea limpiar los formularios?", "Alta Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                    limpiarControles();
+                            }
+                            else
+                                throw new Exception("No se pudo realizar la carga del nuevo registro, por favor verifique los campos completados.");
                         }
                         else
                             throw new Exception("La contraseña debe ser minimo de 4 caracteres.");

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CAccesoDatos.dll" size="44032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CAccesoDatos.dll" size="46080">
       <assemblyIdentity name="CAccesoDatos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KVFP73wBtIIZ8vXiwcy4QQ/m8ZhKp1PaK6M48ixC7Jw=</dsig:DigestValue>
+        <dsig:DigestValue>3h4GOanncgMgcwYj1guT8r3e2p5NjGHX0kZXI3bdHNk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CDominio.dll" size="31744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CDominio.dll" size="33792">
       <assemblyIdentity name="CDominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xlYyQWBOpuYXw37Jv+9GoBIXycb64hxVm3rZOzEQjaU=</dsig:DigestValue>
+        <dsig:DigestValue>vX2Wey65SMQJRWJq4x5FoIYJg2OyM6vT0DWzgtDFcIU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestionAforos.exe" size="185768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestionAforos.exe" size="201128">
       <assemblyIdentity name="GestionAforos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CI6odJZTgm5EhporI3d6HOIEU03ZIkq2yJvCS17n+P0=</dsig:DigestValue>
+        <dsig:DigestValue>FJQlSoETJPaOw7LJ7LpH8ILCtRRtfIcsu0TkkkDonxY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

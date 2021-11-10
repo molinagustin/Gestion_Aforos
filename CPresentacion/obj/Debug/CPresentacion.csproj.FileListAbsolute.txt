@@ -42,3 +42,5 @@ C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\Gestio
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.csproj.CopyComplete
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.exe
 C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\GestionAforos.pdb
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Usuarios.frmCambioContra.resources
+C:\Users\Agustin\source\repos\muni\Gestion_Aforos\CPresentacion\obj\Debug\CPresentacion.Formularios.Usuarios.frmConsultaModif.resources

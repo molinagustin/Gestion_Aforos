@@ -373,7 +373,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGuardar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnGuardar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -765,7 +765,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnModificar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -788,7 +788,7 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(202)))), ((int)(((byte)(211)))));
             this.btnImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(202)))), ((int)(((byte)(211)))));
             this.btnImprimir.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -930,7 +930,6 @@ namespace CPresentacion.Formularios.Aforos.Electricos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(924, 718);
             this.Name = "frmConsultasAfElec";
-            this.Text = "frmConsultasAfElec";
             this.Load += new System.EventHandler(this.frmConsultasAfElec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoPerCE)).EndInit();
             this.ResumeLayout(false);

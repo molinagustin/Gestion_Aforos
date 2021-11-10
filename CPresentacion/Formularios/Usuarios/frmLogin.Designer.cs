@@ -37,6 +37,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.txtPass = new CPresentacion.ControlesPersonalizados.txtExterior();
             this.btnIngresar = new CPresentacion.ControlesPersonalizados.CButton();
             this.btnSalir = new CPresentacion.ControlesPersonalizados.CButton();
+            this.btnCambioCont = new CPresentacion.ControlesPersonalizados.CButton();
             this.panLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -143,7 +144,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(301, 239);
+            this.btnIngresar.Location = new System.Drawing.Point(385, 239);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(132, 40);
             this.btnIngresar.TabIndex = 3;
@@ -164,7 +165,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(473, 239);
+            this.btnSalir.Location = new System.Drawing.Point(538, 239);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(132, 40);
             this.btnSalir.TabIndex = 4;
@@ -173,6 +174,27 @@ namespace CPresentacion.Formularios.Usuarios
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnCambioCont
+            // 
+            this.btnCambioCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.btnCambioCont.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.btnCambioCont.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.btnCambioCont.BorderRadius = 10;
+            this.btnCambioCont.BorderSize = 0;
+            this.btnCambioCont.FlatAppearance.BorderSize = 0;
+            this.btnCambioCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambioCont.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCambioCont.ForeColor = System.Drawing.Color.White;
+            this.btnCambioCont.Location = new System.Drawing.Point(232, 239);
+            this.btnCambioCont.Name = "btnCambioCont";
+            this.btnCambioCont.Size = new System.Drawing.Size(132, 40);
+            this.btnCambioCont.TabIndex = 5;
+            this.btnCambioCont.TabStop = false;
+            this.btnCambioCont.Text = "CAMBIAR CONTRASEÑA";
+            this.btnCambioCont.TextColor = System.Drawing.Color.White;
+            this.btnCambioCont.UseVisualStyleBackColor = false;
+            this.btnCambioCont.Click += new System.EventHandler(this.btnCambioCont_Click);
             // 
             // frmLogin
             // 
@@ -183,6 +205,7 @@ namespace CPresentacion.Formularios.Usuarios
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(700, 300);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCambioCont);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.iconPictureBox2);
@@ -216,5 +239,6 @@ namespace CPresentacion.Formularios.Usuarios
         private ControlesPersonalizados.CButton btnIngresar;
         private ControlesPersonalizados.CButton btnSalir;
         private System.Windows.Forms.PictureBox picLogo;
+        private ControlesPersonalizados.CButton btnCambioCont;
     }
 }

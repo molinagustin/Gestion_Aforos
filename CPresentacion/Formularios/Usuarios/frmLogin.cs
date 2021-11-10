@@ -94,5 +94,13 @@ namespace CPresentacion.Formularios.Usuarios
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        private void btnCambioCont_Click(object sender, EventArgs e)
+        {
+            frmCambioContra cambio = new frmCambioContra();
+            cambio.ShowDialog();
+            if (cambio.DialogResult == DialogResult.OK)
+                MessageBox.Show("La contraseña fue cambiada correctamente.", "Cambio Contraseña");            
+        }
     }
 }

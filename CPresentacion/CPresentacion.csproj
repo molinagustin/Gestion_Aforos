@@ -131,6 +131,18 @@
     <Compile Include="Formularios\Principal\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Usuarios\frmCambioContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\frmCambioContra.Designer.cs">
+      <DependentUpon>frmCambioContra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\frmConsultaModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\frmConsultaModif.Designer.cs">
+      <DependentUpon>frmConsultaModif.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuarios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios\frmCambioContra.resx">
+      <DependentUpon>frmCambioContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios\frmConsultaModif.resx">
+      <DependentUpon>frmConsultaModif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

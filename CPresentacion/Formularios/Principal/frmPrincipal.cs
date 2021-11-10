@@ -224,6 +224,14 @@ namespace CPresentacion.Formularios.Principal
                 CollapseMenu();            
             OpenChildForm(new frmConsultasAfElec());
         }
+
+        private void cONSULTARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Colapso el menu para tener mas espacio y mostrar todos los elementos
+            if (this.panMenuIzquierdo.Width > 200) //Collapse menu
+                CollapseMenu();
+            OpenChildForm(new frmConsultaModif());
+        }
         #endregion
 
         #region Arrastrar Formulario y Varios Adicionales
@@ -314,6 +322,6 @@ namespace CPresentacion.Formularios.Principal
         //    }
         //    base.WndProc(ref m);
         //}
-        #endregion
+        #endregion        
     }
 }

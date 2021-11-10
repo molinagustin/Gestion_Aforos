@@ -91,59 +91,46 @@ namespace CDominio.Modelos
             repositorioUsuario = new repUsuario();
         }
 
-        public string GuardarCambios()
+        public int GuardarCambios()
         {
-            string mensaje = "";
+            int status = 0;
 
-            try
+            //Creamos una instancia de la Entidad Usuario y le asignamos los valores de las propiedades de este modelo
+            var usuario = new entUsuario();
+            usuario.IdUsuarioAct = IdUsuarioAct;
+            usuario.CUIL = CUIL;
+            usuario.NombreUs = NombreUs;
+            usuario.Apellido = Apellido;
+            usuario.Nombre = Nombre;
+            usuario.SaltCont = SaltCont;
+            usuario.HashCont = HashCont;
+            usuario.Privilegio = Privilegio;
+            usuario.Acceso = Acceso;
+            usuario.Activo = Activo;
+            usuario.UsuarioCrea = UsuarioCrea;
+            usuario.FechaCrea = FechaCrea;
+            usuario.UsuarioModif = UsuarioModif;
+            usuario.FechaUltModif = FechaUltModif;
+
+            //En base al estado, sera la operacion a realizar
+            switch (estado)
             {
-                //Creamos una instancia de la Entidad Usuario y le asignamos los valores de las propiedades de este modelo
-                var usuario = new entUsuario();
-                usuario.IdUsuarioAct = IdUsuarioAct;
-                usuario.CUIL = CUIL;
-                usuario.NombreUs = NombreUs;
-                usuario.Apellido = Apellido;
-                usuario.Nombre = Nombre;
-                usuario.SaltCont = SaltCont;
-                usuario.HashCont = HashCont;
-                usuario.Privilegio = Privilegio;
-                usuario.Acceso = Acceso;
-                usuario.Activo = Activo;
-                usuario.UsuarioCrea = UsuarioCrea;
-                usuario.FechaCrea = FechaCrea;
-                usuario.UsuarioModif = UsuarioModif;
-                usuario.FechaUltModif = FechaUltModif;
+                case EstadoEntidad.Agregar:
+                    //De ser necesario, agregar antes los metodos para realizar comprobaciones o calculos
+                    status = repositorioUsuario.Agregar(usuario);
+                    return status;
 
-                //En base al estado, sera la operacion a realizar
-                switch (estado)
-                {
-                    case EstadoEntidad.Agregar:
-                        //De ser necesario, agregar antes los metodos para realizar comprobaciones o calculos
-                        if (repositorioUsuario.Agregar(usuario) > 0)
-                            mensaje = "Alta de usuario exitosa.";
-                        break;
+                case EstadoEntidad.Modificar:
+                    status = repositorioUsuario.Editar(usuario);
+                    return status;
 
-                    case EstadoEntidad.Modificar:
-                        if (repositorioUsuario.Editar(usuario) > 0)                        
-                            mensaje = "Usuario actualizado correctamente.";   
-                        break;
+                case EstadoEntidad.Eliminar:
+                    status = repositorioUsuario.Eliminar(IdUsuarioAct);
+                    return status;
 
-                    case EstadoEntidad.Eliminar:
-                        if (repositorioUsuario.Eliminar(IdUsuarioAct) > 0)                        
-                            mensaje = "Usuario eliminado correctamente.";   
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                SqlException er = ex as SqlException;
-                if (er != null && er.Number == 2627)                
-                    mensaje = "El registro esta duplicado.";                
-                else
-                    mensaje = ex.Message;
-            }
-
-            return mensaje;
+                default:
+                    return status;
+            }        
         }
 
         public List<modUsuario> ObtenerUsuarios()
@@ -176,6 +163,27 @@ namespace CDominio.Modelos
             }
 
             return listaPrivilegios;
+        }
+
+        public List<modUsuarioAcceso> ObtenerAccesos()
+        {
+            var enumerableAccesos = repositorioUsuario.ObtenerAccesos();
+            var listaAccesos = new List<modUsuarioAcceso>();
+            foreach (entUsuarioAcceso acce in enumerableAccesos)
+            {
+                listaAccesos.Add(new modUsuarioAcceso
+                {
+                    IdUsAc = acce.IdUsAc,
+                    AfConexElect = acce.AfConexElect,
+                    ConexElect = acce.ConexElect,
+                    UsuarioCrea = acce.UsuarioCrea,
+                    FechaCrea = acce.FechaCrea,
+                    UsuarioModif = acce.UsuarioModif,
+                    FechaUltModif = acce.FechaUltModif
+                });
+            }
+
+            return listaAccesos;
         }
 
         public modUsuario ObtenerUsuario(int idUsuario)

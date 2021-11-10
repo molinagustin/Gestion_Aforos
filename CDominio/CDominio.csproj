@@ -89,6 +89,8 @@
     <Compile Include="Modelos\modTipoMedidor.cs" />
     <Compile Include="Modelos\modTipoObraConexionElectrica.cs" />
     <Compile Include="Modelos\modUsuario.cs" />
+    <Compile Include="Modelos\modUsuarioAcceso.cs" />
+    <Compile Include="Modelos\modUsuarioDGV.cs" />
     <Compile Include="Modelos\modUsuarioPrivilegios.cs" />
     <Compile Include="ObjetosDeValor\EstadoEntidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -524,20 +524,21 @@ namespace CPresentacion.Formularios.Principal
             this.ddmUsuarios.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmUsuarios.Name = "ddmUsuarios";
             this.ddmUsuarios.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmUsuarios.Size = new System.Drawing.Size(144, 48);
+            this.ddmUsuarios.Size = new System.Drawing.Size(181, 70);
             // 
             // nUEVOToolStripMenuItem
             // 
             this.nUEVOToolStripMenuItem.Name = "nUEVOToolStripMenuItem";
-            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nUEVOToolStripMenuItem.Text = "NUEVO";
             this.nUEVOToolStripMenuItem.Click += new System.EventHandler(this.nUEVOToolStripMenuItem_Click);
             // 
             // mODIFICARToolStripMenuItem
             // 
             this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
-            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
+            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mODIFICARToolStripMenuItem.Text = "CONSULTAR";
+            this.mODIFICARToolStripMenuItem.Click += new System.EventHandler(this.cONSULTARToolStripMenuItem_Click);
             // 
             // ddmPerfil
             // 

@@ -21,6 +21,8 @@ namespace CAccesoDatos.Repositorios
         private string ObtenerPriv;
         private string ObtenerIdNuevoAcceso;
         private string ObtenerAccesosUsuario;
+        private string ObtenerAcce;
+        private string ObtenerUsDGV;
 
         //Constructor
         public repUsuario()
@@ -36,7 +38,7 @@ namespace CAccesoDatos.Repositorios
             InsertarAcceso = "insert into usuarios_accesos(AfConexElect, ConexElect, UsuarioCrea, FechaCrea, UsuarioModif) values (@AfConexElect, @ConexElect, @UsuarioCrea, @FechaCrea, @UsuarioModif)";
 
             //Falta ver como editar a la misma vez los accesos si fueron modificados o bien crear una query nueva para los accesos
-            EditarUsuario = "update usuarios set CUIL=@CUIL, NombreUs=@NombreUs, Apellido=@Apellido, Nombre=@Nombre, HashCont=@HashCont, Privilegio=@Privilegio, UsuarioModif=@UsuarioModif, FechaUltModif=@FechaUltModif where IdUsuarioAct=@IdUsuarioAct";
+            EditarUsuario = "update usuarios set CUIL=@CUIL, NombreUs=@NombreUs, Apellido=@Apellido, Nombre=@Nombre, SaltCont=@SaltCont, HashCont=@HashCont, Privilegio=@Privilegio, UsuarioModif=@UsuarioModif, FechaUltModif=@FechaUltModif where IdUsuarioAct=@IdUsuarioAct";
 
             EliminarUsuario = "update usuarios set Activo=@Activo where IdUsuarioAct=@IdUsuarioAct";
 
@@ -45,6 +47,10 @@ namespace CAccesoDatos.Repositorios
             ObtenerIdNuevoAcceso = "select MAX(IdUsAc) from usuarios_accesos";
 
             ObtenerAccesosUsuario = "select * from usuarios_accesos where IdUsAc = @IdUsAc";
+
+            ObtenerAcce = "select * from usuarios_accesos";
+
+            ObtenerUsDGV = "select usuarios.CUIL, usuarios.NombreUs, usuarios.Apellido, usuarios.Nombre, usuarios.Activo, usuarios1.NombreUs, usuarios.FechaCrea, usuarios2.NombreUs, usuarios.FechaUltModif from usuarios inner join usuarios as usuarios1 on usuarios.UsuarioCrea = usuarios1.IdUsuarioAct inner join usuarios as usuarios2 on usuarios.UsuarioModif = usuarios2.IdUsuarioAct";
         }
 
         public int Agregar(entUsuario entidad)
@@ -151,6 +157,32 @@ namespace CAccesoDatos.Repositorios
             return listaPrivilegios;
         }
 
+        public IEnumerable<entUsuarioAcceso> ObtenerAccesos()
+        {
+            var tabla = ExecuteReader(ObtenerAcce);
+            var listaAccesos = new List<entUsuarioAcceso>();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                listaAccesos.Add(new entUsuarioAcceso
+                {
+                    IdUsAc = Convert.ToInt32(fila[0]),
+                    AfConexElect = Convert.ToBoolean(fila[1]),
+                    ConexElect = Convert.ToBoolean(fila[2]),
+                    UsuarioCrea = Convert.ToInt32(fila[3]),
+                    FechaCrea = Convert.ToDateTime(fila[4]),
+                    UsuarioModif = Convert.ToInt32(fila[5]),
+                    FechaUltModif = Convert.ToDateTime(fila[6])
+                });
+            }
+            tabla.Dispose();
+            return listaAccesos;
+        }
+
+        public DataTable ObtenerUsuariosDGV()
+        {
+            return ExecuteReader(ObtenerUsDGV);
+        }
+
         public void ParametrosUsuario(ref List<SqlParameter> parametros, entUsuario usuario)
         {
             parametros.Add(new SqlParameter("@CUIL", usuario.CUIL));
@@ -185,6 +217,6 @@ namespace CAccesoDatos.Repositorios
             nuevoUsuario.UsuarioModif = Convert.ToInt32(fila[12]);
             nuevoUsuario.FechaUltModif = Convert.ToDateTime(fila[13]);
             return nuevoUsuario;
-        }
+        }        
     }
 }
